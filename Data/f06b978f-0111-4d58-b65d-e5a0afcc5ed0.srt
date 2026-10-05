@@ -1,0 +1,3764 @@
+1
+00:00:14,060 --> 00:00:16,160
+[Unknown]: so we will start now
+
+2
+00:00:16,440 --> 00:00:17,700
+[rushikesh]: let me share the screen
+
+3
+01:54:45,340 --> 01:54:46,660
+[rushikesh]: can you all see the screen
+
+4
+01:55:41,580 --> 01:55:42,080
+[rushikesh]: great
+
+5
+00:00:30,020 --> 00:00:33,280
+[rushikesh]: so yesterday so yesterday let me
+
+6
+00:00:53,780 --> 00:00:59,180
+[rushikesh]: so yesterday can someone help me understand like what things did we cover yesterday
+
+7
+00:01:00,720 --> 00:01:01,980
+[rushikesh]: let us do a quick recap
+
+8
+00:01:03,980 --> 00:01:08,720
+[rushikesh]: can you help me describe what things did we cover yesterday
+
+9
+00:01:16,340 --> 00:01:17,060
+[rushikesh]: on quick
+
+10
+00:01:29,640 --> 00:01:34,200
+[rushikesh]: everyone what were the things which we covered yesterday
+
+11
+00:01:42,740 --> 00:01:46,760
+[rushikesh]: will not be able to move ahead if you don't respond fast
+
+12
+00:01:57,000 --> 00:02:02,220
+[rushikesh]: good malvika very good
+
+13
+00:02:06,380 --> 00:02:09,000
+[rushikesh]: anyone else would like to add to this
+
+14
+00:02:10,160 --> 00:02:35,460
+[rushikesh]: so malvika is saying we covered nlm temperature cosine similarity so there is no top and there is a top t but good good basics of llm we went with embeddings good vectors
+
+15
+00:02:39,650 --> 00:02:40,150
+[rushikesh]: cosine
+
+16
+00:02:44,340 --> 00:02:45,620
+[rushikesh]: ok good
+
+17
+00:02:47,460 --> 00:02:51,440
+[rushikesh]: do you remember the sequence of phases within an llm
+
+18
+00:02:52,480 --> 00:02:59,760
+[rushikesh]: like we saw the phases of llm like how the data transitions from the start till the end
+
+19
+00:03:00,100 --> 00:03:01,760
+[rushikesh]: do you guys remember that flow
+
+20
+00:03:02,620 --> 00:03:04,760
+[rushikesh]: like what will first happen with the input
+
+21
+00:03:06,140 --> 00:03:08,260
+[rushikesh]: yes we went with the transformer architecture
+
+22
+00:03:11,140 --> 00:03:51,680
+[rushikesh]: but if you remember when the data comes okay when the user enters a prompt what will happen first what will be the first step sherlyn that's good so first thing is the tokenization ok a very first thing where the prompt is broken down into the individual tokens and that's your core thing with respect to the costing latency speed all those things which we discussed yesterday
+
+23
+00:03:52,020 --> 00:03:53,500
+[rushikesh]: so first is the tokenization
+
+24
+00:03:53,860 --> 00:03:55,580
+[rushikesh]: after tokenization what will happen
+
+25
+00:03:59,460 --> 00:04:03,980
+[rushikesh]: so once the data is tokenized what will be the next thing
+
+26
+00:04:10,080 --> 00:04:18,800
+[rushikesh]: okay good so second is the embedding of the data and can you quickly mention like what does embedding do
+
+27
+00:04:18,800 --> 00:04:23,440
+[rushikesh]: tokenization is a breaking of the input into the smaller pieces
+
+28
+00:04:24,480 --> 00:04:26,080
+[rushikesh]: but why is embedding important
+
+29
+00:04:32,220 --> 00:04:44,660
+[rushikesh]: what is the goal of embedding
+
+30
+00:04:49,780 --> 00:04:53,800
+[rushikesh]: we discussed some for context generation
+
+31
+02:50:40,600 --> 02:50:41,100
+[malavika]: okay
+
+32
+01:31:48,740 --> 01:31:49,060
+[rushikesh]: good
+
+33
+00:04:58,520 --> 00:04:59,280
+[rushikesh]: that's right
+
+34
+00:04:59,340 --> 00:05:21,920
+[rushikesh]: so this like how i would define this is is brings in assigning numbers to understand how similar words are to each other great great so the whole goal here is like we transform the token to a vector
+
+35
+00:05:22,660 --> 00:05:31,520
+[rushikesh]: we are transforming a token to a vector and the whole of this vector this vector is called as this vector is called as embedding
+
+36
+00:05:31,980 --> 00:05:33,580
+[rushikesh]: but what do you mean by embedding
+
+37
+00:05:33,700 --> 00:05:40,740
+[rushikesh]: embedding basically means it embeds some meaning about the token
+
+38
+00:05:41,200 --> 00:05:54,640
+[rushikesh]: okay so vectors are nothing but like some kind of a meaning to that token or word you say it tries to bring in that because just a word there is no meaning
+
+39
+00:05:54,640 --> 00:06:02,620
+[rushikesh]: so if i just tell you till the time embedding is not being visualized in your brain you won't be able to explain it very well
+
+40
+00:06:02,900 --> 00:06:08,400
+[rushikesh]: if embedding you're not able to explain embedding is just a word for you there is no meaning
+
+41
+00:06:08,720 --> 00:06:17,460
+[rushikesh]: but till the time you see in your brain some images like what is this embedding that's when the meaning is coming to you that okay now i understand this
+
+42
+00:06:17,460 --> 00:06:37,600
+[rushikesh]: but if you can't visualize it if you can't understand or you can't relate it with something else then till that point you don't understand the meaning of it similar to that is vectors like when vectors with vectors we can say that okay this and this is similar this and this is different and it tries to embed different type of information
+
+43
+00:06:37,800 --> 00:06:49,180
+[rushikesh]: so that is a core goal with respect to the embedding and it plays a very important role in the whole machine learning and deep learning space to deal with nlp based data
+
+44
+00:06:49,860 --> 00:06:50,780
+[rushikesh]: after the embedding
+
+45
+00:06:54,960 --> 00:07:03,240
+[rushikesh]: now within embedding i told you there are 2 types of embedding like 1 transformer add 1 more type of embedding is a positional embedding
+
+46
+00:07:03,940 --> 00:07:16,660
+[rushikesh]: the goal of positional embedding is to add positional information into the embedding so that llms have an understanding with respect to the position of the given token in the whole context
+
+47
+00:07:18,800 --> 00:07:23,920
+[rushikesh]: okay after this what is the next step
+
+48
+00:07:24,300 --> 00:07:47,000
+[rushikesh]: like if you remember fast come on
+
+49
+00:08:03,060 --> 00:08:03,960
+[rushikesh]: what was next
+
+50
+00:08:10,320 --> 00:08:12,240
+[rushikesh]: so i am just bringing the image for you
+
+51
+00:08:12,240 --> 00:08:27,480
+[rushikesh]: what do you think what was next is this transformers or attention mechanism
+
+52
+00:08:29,440 --> 00:08:36,720
+[rushikesh]: next is this attention mechanism which tries to like this point embeddings are individual
+
+53
+00:08:37,720 --> 00:08:41,080
+[rushikesh]: every word has its own meaning separately till this point
+
+54
+00:08:41,580 --> 00:08:46,720
+[rushikesh]: but this is where it tries to correlate all of those tokens with each other
+
+55
+00:08:47,140 --> 00:08:52,440
+[rushikesh]: in the attention space it tries to understand ok now this word is related to this this word is related to this
+
+56
+00:08:52,720 --> 00:09:17,700
+[rushikesh]: all that relationship is captured within the transformer structure and then from that understanding this is a place which is called as a mlp or multilayer perceptron where this multilayer perceptron then tries to transform this knowledge that it has understood about the given data into a generation ok
+
+57
+00:09:18,280 --> 00:09:23,540
+[rushikesh]: every word has a 1 output here but all those outputs will be blank
+
+58
+00:09:24,000 --> 00:09:28,480
+[rushikesh]: only the final output will be considered because this is where everything is aggregated
+
+59
+00:09:29,340 --> 00:10:22,610
+[rushikesh]: okay if you see i have 1 2 3 4 5 6 words and the output is also 1 2 3 4 5 6 but the last token generates the output because this is where all of this is summarized ok all of this is summarized and this is where the output is available so tokenization embedding the transformer blocks the mlp blocks which actually does the generation and finally the output probabilities ok so then we have this attention mechanism which is basically the transformers and after this transformers mechanism we have mlp which actually does the final generation calculation and then lastly we have the outputs ok
+
+60
+00:10:23,000 --> 00:10:27,173
+[rushikesh]: now quickly tell me
+
+61
+00:10:33,180 --> 00:10:34,440
+[rushikesh]: what do you think is temperature
+
+62
+00:10:35,660 --> 00:10:36,680
+[rushikesh]: just a high level
+
+63
+00:10:41,880 --> 00:10:43,540
+[rushikesh]: will the higher temperature do
+
+64
+00:10:43,740 --> 00:10:46,020
+[rushikesh]: it checks the randomness of the response
+
+65
+00:10:46,080 --> 00:10:47,280
+[rushikesh]: ok good
+
+66
+00:10:47,440 --> 00:10:51,160
+[rushikesh]: but what will a higher temperature do and what will a lower temperature will
+
+67
+00:11:05,500 --> 00:11:14,600
+[rushikesh]: lower temperature is more deterministic very good very good shailen and the lower temperature is less random okay good malvika
+
+68
+00:11:18,060 --> 00:11:25,460
+[rushikesh]: so lower temp is more consistent okay you guys are saying the same thing
+
+69
+00:11:25,520 --> 00:11:27,460
+[rushikesh]: i'm just putting it in a different words
+
+70
+00:11:28,020 --> 00:11:35,140
+[rushikesh]: so more consistent means you will get more similar outputs even if you try multiple iterations
+
+71
+00:11:36,260 --> 00:11:48,060
+[rushikesh]: okay with the lower temperature with the higher temperature more not randomness but you have more thing but you have more thing to sample
+
+72
+00:11:49,860 --> 00:11:56,600
+[rushikesh]: okay higher distribution more distributed data for sampling
+
+73
+00:12:00,700 --> 00:12:12,240
+[rushikesh]: okay now more statistically i'm trying to represent here is the probability is distributed across multiple output tokens for the sampling
+
+74
+00:12:12,700 --> 00:12:16,920
+[rushikesh]: okay and based on the probability that comes up we try to pick up the word
+
+75
+00:12:16,920 --> 00:12:42,080
+[rushikesh]: so in this case if you see when i change the temperature based on the changes the probability distributed like the probability distribution is getting shifted higher temperature they are all getting unique lower temperature they are all getting shifted to only 1 and that allows the model and this probability is what at the end we use to pick up the word
+
+76
+00:12:42,260 --> 00:12:55,140
+[rushikesh]: so see only till this part this is a transformer or llm ok this is an additional thing which is added separately after getting an output to pick up the token randomly
+
+77
+00:12:55,400 --> 00:12:58,400
+[rushikesh]: okay now when we pick up randomly we do a weighted random
+
+78
+00:12:58,860 --> 00:13:03,220
+[rushikesh]: weighted random means whatever is the weight based on that we pick up randomly
+
+79
+00:13:03,340 --> 00:13:09,840
+[rushikesh]: so in this case visualize will be picked up 97 times and create will be picked up 2% of the time
+
+80
+00:13:10,080 --> 00:13:17,720
+[rushikesh]: 3 and 2 something like okay any questions
+
+81
+00:13:26,400 --> 00:13:30,760
+[rushikesh]: if no i will move on to today's content
+
+82
+00:13:33,340 --> 00:13:34,940
+[rushikesh]: and we also saw top p
+
+83
+00:13:34,940 --> 00:13:40,220
+[rushikesh]: top p's goal is basically to pick up based on the probability distribution
+
+84
+00:13:40,600 --> 00:13:43,480
+[rushikesh]: it just directly picks up based on the probability distribution
+
+85
+00:13:43,940 --> 00:13:48,900
+[rushikesh]: if you say 80 percent it will pick up the top 80 percent in a cumulative way
+
+86
+00:13:49,320 --> 00:13:50,840
+[rushikesh]: so that is the top p
+
+87
+00:13:50,840 --> 00:13:55,460
+[rushikesh]: so temperature top p those 2 are like a very main components
+
+88
+00:13:57,720 --> 00:14:04,660
+[rushikesh]: now let us move on to the next section for today which is the prompting fundamentals
+
+89
+00:14:06,300 --> 00:14:18,360
+[rushikesh]: now yesterday our goal was to understand the transformer so that we get to know how this prompting actually work and why they really work
+
+90
+00:14:19,300 --> 00:14:36,660
+[rushikesh]: yesterday's goal was to see that okay the main thing to pick up from the yesterday's discussion is this llms are nothing but probabilistic systems internally and this probabilistic systems are generating tokens 1 by 1
+
+91
+00:14:37,280 --> 00:14:43,780
+[rushikesh]: okay they are not all getting generated in 1 go but they are being generated 1 token at a time
+
+92
+00:14:44,280 --> 00:14:46,100
+[rushikesh]: now what is the impact of it
+
+93
+00:14:46,100 --> 00:14:53,340
+[rushikesh]: okay somebody tell me what will be the impact of 1 token getting generated at a time on the other tokens
+
+94
+00:14:59,380 --> 00:15:07,900
+[rushikesh]: can you think of like what could be the impact of 1 token all of these tokens are getting generated 1 by 1
+
+95
+00:15:08,300 --> 00:15:18,760
+[rushikesh]: now let us say we have generated 5 tokens and the sixth token what will be the impact on the sixth token from all of this
+
+96
+00:15:25,180 --> 00:15:29,600
+[rushikesh]: the sixth token will have the knowledge of all the 5 tokens before it is generated
+
+97
+00:15:30,180 --> 00:15:40,400
+[rushikesh]: now before the seventh token is generated seventh token will have all the knowledge of the previous 6th 8th token before getting generated will have all the knowledge of the previous
+
+98
+00:15:40,400 --> 00:15:47,060
+[rushikesh]: so what's happening is the knowledge is getting generated on the fly and being used for the next tokens
+
+99
+00:15:47,360 --> 00:16:00,460
+[rushikesh]: it's not only your input prompt that matters but even the token which are getting generated all of those have an impact on the next token being generated and that's where the prompting really gets impacted
+
+100
+00:16:00,800 --> 00:16:07,240
+[rushikesh]: okay so today's goal is to understand like generate the structured output based on the llms
+
+101
+00:16:07,660 --> 00:16:19,680
+[rushikesh]: how do we build some good perfect prompt templates which can help us in defining more consistent outputs using we will see a format like which will help us in selecting the criteria
+
+102
+00:16:19,680 --> 00:16:23,260
+[rushikesh]: actually this has got shifted upside down
+
+103
+00:16:23,360 --> 00:16:27,180
+[rushikesh]: so this is the first thing for understanding the 3 different message types
+
+104
+00:16:27,700 --> 00:16:30,140
+[rushikesh]: the first is going to be the system
+
+105
+00:16:30,560 --> 00:16:35,580
+[rushikesh]: we will see there are various types of messages when we are interacting with the llm
+
+106
+00:16:35,940 --> 00:16:41,560
+[rushikesh]: there is a system prompt there is a user prompt and there is a assistant prompt
+
+107
+00:16:42,420 --> 00:16:43,560
+[rushikesh]: assistant is nothing but the ai prompt
+
+108
+00:16:46,240 --> 00:16:47,440
+[malavika]: okay so assistant
+
+109
+00:16:49,640 --> 00:16:58,020
+[malavika]: can you please explain the what you said just now that the sixth token generated will have context of the previous 1
+
+110
+00:16:58,040 --> 00:17:04,520
+[malavika]: so if we go back to the transformer architecture and we just take 1 sentence
+
+111
+00:17:04,920 --> 00:17:05,900
+[malavika]: how are you
+
+112
+00:17:07,340 --> 00:17:08,100
+[malavika]: so how
+
+113
+00:17:09,060 --> 00:17:10,700
+[malavika]: in the summer yeah
+
+114
+00:17:20,640 --> 00:17:24,780
+[rushikesh]: yeah i think but i got your question
+
+115
+00:17:24,780 --> 00:17:30,060
+[rushikesh]: so let me just quickly show you what i am talking about
+
+116
+00:17:30,060 --> 00:17:31,580
+[rushikesh]: this is what i am talking about
+
+117
+00:17:32,120 --> 00:17:36,780
+[rushikesh]: so what i am saying is see the initial parameters only the sky is
+
+118
+00:17:37,700 --> 00:17:44,700
+[rushikesh]: okay the initial parameters only the sky is but we generated blue based on the skies
+
+119
+00:17:45,640 --> 00:17:46,740
+[rushikesh]: the blue is added
+
+120
+00:17:47,000 --> 00:17:57,240
+[rushikesh]: now see this clear till the time we are generating the clear the context is not just the sky is but the context is the sky is blue and
+
+121
+00:17:58,260 --> 00:18:04,660
+[rushikesh]: ok so this what's happening is even the output is going to derive the output
+
+122
+00:18:05,280 --> 00:18:11,980
+[rushikesh]: so whatever is the nlm that are going to generate all of that will keep on impacting the next set of generation
+
+123
+00:18:12,380 --> 00:18:30,780
+[rushikesh]: so by mistake let's assume by mistake 1 of a token that the nlm generates goes wrong in terms of let's say temperature pickup or some random pickup 1 of a token that it picked up goes wrong what do you think will happen what will happen with the next set of tokens
+
+124
+00:18:32,520 --> 00:18:34,160
+[malavika]: they all will be wrong
+
+125
+00:18:35,060 --> 00:19:01,520
+[rushikesh]: right so that's where this generation plays a very important role and how we prompt the system in terms of what should be generated also matters a lot so all those things we will see but before we do the problem this part is very important to understand that every token that is getting generated plays a very important role in generating the next set of tokens
+
+126
+00:19:02,260 --> 00:19:05,180
+[rushikesh]: okay i hope that part is clear what i was saying
+
+127
+00:19:05,340 --> 00:19:09,640
+[malavika]: yeah so there is still 1 confusion when we were doing rnn
+
+128
+00:19:10,520 --> 00:19:17,800
+[malavika]: so that that was that worked on the short term memory if i'm not wrong
+
+129
+00:19:17,980 --> 00:19:27,680
+[malavika]: so what happens is like suppose i give this the sky is and so 1 by 1 it just remembers the word before that and it goes forward
+
+130
+00:19:28,040 --> 00:19:40,140
+[malavika]: now here when we take when we send this entire sentence to the transformer as an input so first the is going the token is happening
+
+131
+00:19:40,160 --> 00:19:46,140
+[rushikesh]: first is this guy this whole thing goes first because this is an input prompt the whole thing goes
+
+132
+00:19:47,780 --> 00:19:53,940
+[malavika]: ok and then for the embedding also is happening together for all of them
+
+133
+00:19:53,940 --> 00:19:57,500
+[rushikesh]: so you're talking about llm right
+
+134
+00:19:57,500 --> 00:19:58,300
+[rushikesh]: not the rnn
+
+135
+00:19:58,780 --> 00:20:01,020
+[rushikesh]: no no i'm talking about llm now
+
+136
+00:20:01,020 --> 00:20:01,520
+[rushikesh]: yeah
+
+137
+00:20:01,780 --> 00:20:04,340
+[rushikesh]: so in llm all 3 goes in 1 single go
+
+138
+00:20:04,340 --> 00:20:42,340
+[rushikesh]: see if i go back to this example which sorry we had this see when i'm passing the data visualization empowers users to okay so when we are passing this all of this goes as a input in 1 single go yeah okay so when i generate now 1 token is going to generate okay so all of this goes into 1 single phase the whole matrix multiplication and the whole mathematics will happen here and we get a 1 output
+
+139
+00:20:43,920 --> 00:20:50,340
+[rushikesh]: now this again came this will also come back as an input now if you want to generate a next token
+
+140
+00:20:50,340 --> 00:20:56,820
+[rushikesh]: so now next token for that this whole thing becomes a token this whole thing becomes the input prompt
+
+141
+00:20:56,980 --> 00:20:58,140
+[rushikesh]: yes yeah
+
+142
+00:20:59,480 --> 00:21:11,260
+[rushikesh]: okay so like this every token before getting generated will have a knowledge from the previous set of tokens even including the output tokens
+
+143
+00:21:12,880 --> 00:21:13,380
+[rushikesh]: yes
+
+144
+00:21:13,620 --> 00:21:13,820
+[rushikesh]: yeah
+
+145
+00:21:14,840 --> 00:21:29,880
+[rushikesh]: so what we provide as a 1 single prompt is not the only source of information but even what llm is going to generate on top of it and keeps generating that all is also going to have a overall impact on the final output
+
+146
+00:21:31,500 --> 00:21:51,360
+[rushikesh]: okay yeah there are multiple prompting strategies which are defined based on this fundamental knowledge of what i'm saying right now that how this generation is dependent on each other the multiple prompting strategies are defined this is where we will discuss around the few short prompting the different components
+
+147
+00:21:51,460 --> 00:21:57,848
+[rushikesh]: we will also talk about some more strategies like the cot tot
+
+148
+00:21:58,360 --> 00:21:59,440
+[rushikesh]: there are various strategies
+
+149
+00:21:59,440 --> 00:22:05,140
+[rushikesh]: so all the strategies in terms of prompting we are going to depend on this concept
+
+150
+00:22:05,540 --> 00:22:09,500
+[rushikesh]: ok so we will be learning there are different components of a prompt
+
+151
+00:22:09,520 --> 00:22:11,700
+[rushikesh]: there is a 0 short prompting few short prompting
+
+152
+00:22:11,980 --> 00:22:13,340
+[rushikesh]: there is a drq strategy
+
+153
+00:22:13,520 --> 00:22:25,140
+[rushikesh]: we will see how do we build some like what kind of a template we can follow to build some better strategies of prompting and then generating the structured outputs from the nlm
+
+154
+00:22:25,680 --> 00:22:28,520
+[rushikesh]: so this is what we will be learning to a good extent
+
+155
+00:22:28,520 --> 00:22:34,240
+[rushikesh]: if time permits we will also go through tot and cot based strategy and discuss about those more
+
+156
+00:22:35,240 --> 00:22:42,940
+[rushikesh]: now prompting is a combination of art and science
+
+157
+00:22:43,520 --> 00:22:56,820
+[rushikesh]: ok it's not just the science and it's not just the art but it's like a balance between the art and science where the art can give the intuition judgment and creativity that you bring out of it
+
+158
+00:22:56,980 --> 00:23:01,220
+[rushikesh]: okay but the science is all about the mechanics techniques and principles which are there
+
+159
+00:23:01,220 --> 00:23:22,280
+[rushikesh]: if you just think of like music or even a guitar like guitar as an instrument could be science that okay there's a music waves that you can create out of it it is a physical instrument there is some science that goes into bringing that music but how do you use that to create a creative music as outcome is basically the art
+
+160
+00:23:22,580 --> 00:23:33,020
+[rushikesh]: same thing llm is the science that we have seen that the prompting would also be like more of artistic thing like how you prompt it
+
+161
+00:23:33,140 --> 00:23:39,020
+[rushikesh]: and nowadays even this has reduced a bit this model does internally become more artistic
+
+162
+00:23:39,640 --> 00:23:49,500
+[rushikesh]: a lot of things have changed over the past but still to some level how you try to steer this models plays a very important role
+
+163
+00:23:49,940 --> 00:23:54,120
+[rushikesh]: so it's a mix of art and science of both
+
+164
+00:23:55,600 --> 00:24:01,100
+[rushikesh]: these are the 3 different type of message types which internally goes in the model
+
+165
+00:24:01,400 --> 00:24:06,960
+[rushikesh]: usually yesterday whatever we did we only limited ourselves to user and assistant
+
+166
+00:24:07,120 --> 00:24:11,620
+[rushikesh]: user and assistant in kumara there is a user prompt which we give as a input
+
+167
+00:24:12,440 --> 00:24:17,700
+[rushikesh]: and then there is an assistant which is going to be the response from the llm
+
+168
+00:24:18,560 --> 00:24:23,220
+[rushikesh]: okay user is what we give as the input assistant is what llm gives as the output
+
+169
+00:24:23,300 --> 00:24:30,660
+[rushikesh]: assistant is something we will understand in some time like what does the system basically mean
+
+170
+00:24:30,800 --> 00:24:48,420
+[rushikesh]: so all of these 3 plays a very important role in terms of the prompting that we will be doing or even building the system like how we build the systems is all going to depend heavily on this kind of this 3 types of messages which are there
+
+171
+00:24:50,140 --> 00:24:53,800
+[rushikesh]: now let's start with the first which is the system message
+
+172
+00:24:54,720 --> 00:25:00,560
+[rushikesh]: this is a message which will actually define how your system should behave
+
+173
+00:25:00,780 --> 00:25:02,300
+[rushikesh]: okay how your system should behave
+
+174
+00:25:02,300 --> 00:25:07,900
+[rushikesh]: this is like an actual program description that you give where you define all the personas
+
+175
+00:25:10,240 --> 00:25:41,260
+[rushikesh]: if you guys have already tried something like you are an expert professional marketer or you are a software engineer or you are a medical expert so if you have seen something like that that's called as a persona ok role and persona we will discuss more on that but in system message we try to provide that then set the tone and style like how the system should behave what kind of tone it should follow should it be friendly should it be more conservative should it be more stricter in nature
+
+176
+00:25:42,440 --> 00:25:49,700
+[rushikesh]: so those kind of boundaries we try to define within the tone and style
+
+177
+00:25:50,020 --> 00:25:52,320
+[rushikesh]: style could be how should the response be
+
+178
+00:25:52,440 --> 00:26:02,120
+[rushikesh]: the response should be code based the response should be bullet based the response should be power point based something like that will come inside the style
+
+179
+00:26:03,060 --> 00:26:04,860
+[rushikesh]: then the constraints and rules
+
+180
+00:26:05,780 --> 00:26:11,140
+[rushikesh]: this basically defines what your system is supposed to do and supposed to not do
+
+181
+00:26:11,440 --> 00:26:14,880
+[rushikesh]: it is a limit that okay you are only supposed to do business
+
+182
+00:26:15,740 --> 00:26:18,140
+[rushikesh]: if something goes beyond this you should not do
+
+183
+00:26:19,140 --> 00:26:22,740
+[rushikesh]: now provide also special instructions in this case
+
+184
+00:26:23,420 --> 00:26:32,640
+[rushikesh]: so if you think of a theater like system within the theater the director is someone who is trying to direct the whole setup
+
+185
+00:26:32,640 --> 00:26:46,640
+[rushikesh]: you can imagine something like that where even if everyone is acting and playing but the director is a person who is trying to orchestrate everything and define the rules how who should do what and all will be the goal of director
+
+186
+00:26:46,640 --> 00:26:53,100
+[rushikesh]: similarly here system prompt will be the 1 which will direct the whole system
+
+187
+00:26:53,720 --> 00:26:55,620
+[rushikesh]: system messages are processed first
+
+188
+00:26:56,160 --> 00:26:59,520
+[rushikesh]: they create the length through which all the user inputs are interpreted
+
+189
+00:26:59,580 --> 00:27:05,140
+[rushikesh]: what we mean by this is let's imagine you are creating a chatbot
+
+190
+00:27:07,040 --> 00:27:11,440
+[rushikesh]: now for a chatbot user is providing the input
+
+191
+00:27:11,680 --> 00:27:13,740
+[rushikesh]: let's say we are talking about a banking chatbot
+
+192
+00:27:13,740 --> 00:27:19,100
+[rushikesh]: the banking chatbot will give you bank balance last 5 statements things like that
+
+193
+00:27:19,540 --> 00:27:28,340
+[rushikesh]: the user when he prompts he will only tell that okay give me my bank balance okay that's the user prompt
+
+194
+00:27:28,740 --> 00:27:38,540
+[rushikesh]: but back end we will have a more refined system prompt for the llm which will say how to process this user prompt
+
+195
+00:27:38,940 --> 00:28:10,400
+[rushikesh]: okay the user is only saying give me bank balance but system message will say that okay we need to get to the database from the database we are supposed to pull this table from this table we have to look into this this data and then solve this answer so this kind of a more refined description will go into the system prompt so system messages are always processed first in the llm because that sets a boundary limitations persona everything is getting set inside the system prompt
+
+196
+00:28:11,120 --> 00:28:14,740
+[rushikesh]: the next comes the user message
+
+197
+00:28:15,520 --> 00:28:22,700
+[rushikesh]: the user message is where the user is going to pass in the input which are the direct questions by the user
+
+198
+00:28:22,900 --> 00:28:24,620
+[rushikesh]: user don't know how the system works
+
+199
+00:28:24,620 --> 00:28:26,600
+[rushikesh]: he is just going to put the questions
+
+200
+00:28:27,180 --> 00:28:38,300
+[rushikesh]: so the human input it could be questions it could be data it could be request it could be conversational drivers which will be there when you are building the system
+
+201
+00:28:38,300 --> 00:28:40,140
+[rushikesh]: this is all about user
+
+202
+00:28:40,580 --> 00:28:42,940
+[rushikesh]: now there are 2 sides you have to see
+
+203
+00:28:43,180 --> 00:28:44,120
+[rushikesh]: 1 is user
+
+204
+00:28:44,540 --> 00:28:49,340
+[rushikesh]: user don't know how the system works which will be defined by the system in the back end
+
+205
+00:28:49,780 --> 00:28:52,620
+[rushikesh]: system is not usually available for the user
+
+206
+00:28:54,160 --> 00:28:56,520
+[rushikesh]: system is not available for the user
+
+207
+00:28:56,600 --> 00:29:09,060
+[rushikesh]: i will give you just a brief is the chat gpt when we are dealing with the chat gpt what you are putting as a question is the user prompt
+
+208
+00:29:09,780 --> 00:29:19,000
+[rushikesh]: but back end it will also have a more refined system prompt which define how to process your user prompt as a system prompt
+
+209
+00:29:19,000 --> 00:29:21,300
+[rushikesh]: we will see some examples for this
+
+210
+00:29:23,880 --> 00:29:33,420
+[rushikesh]: okay and user is all about giving the user based inputs anything that you pass in the interacting user it will all come here
+
+211
+00:29:33,420 --> 00:29:38,460
+[rushikesh]: user messages are interpreted in the context established by the system message
+
+212
+01:31:12,770 --> 01:31:14,120
+[rushikesh]: what do
+
+213
+00:29:41,160 --> 00:30:12,100
+[rushikesh]: i mean by this is if the system prompt says respond only in the json and user ask a question here any question it will always be responded in a json based output okay the user messages are interpreted in the context established by the system messages only in multi-tent conversation there is a sequence okay when we are building a chatbot in chatbot there are multiple messages which will come
+
+214
+00:30:12,180 --> 00:30:17,360
+[rushikesh]: so in multiple conversations the sequence of user messages builds the overall context
+
+215
+00:30:17,540 --> 00:30:23,440
+[rushikesh]: we will again once we go to the practical part we will see this part in more detail
+
+216
+00:30:26,280 --> 00:30:30,120
+[rushikesh]: this is the ai message or assistant message
+
+217
+00:30:30,120 --> 00:30:32,380
+[rushikesh]: we can call it ai or assistant both
+
+218
+00:30:33,620 --> 00:30:36,340
+[rushikesh]: this is where the overall output will come
+
+219
+00:30:36,340 --> 00:30:38,800
+[rushikesh]: this is the response from the nlm
+
+220
+00:30:39,780 --> 00:30:45,260
+[rushikesh]: okay response from the nlm is called as a ai message
+
+221
+00:30:46,340 --> 00:31:02,000
+[rushikesh]: so ai message the primary goal is the model response and whatever is being generated as part of the models output ok based on the system prompt and user prompt which is a input the ai prompt is basically the output
+
+222
+00:31:02,900 --> 00:31:11,080
+[rushikesh]: there are some more strategies which we can use in the ai prompt to do some pre-filling to the system
+
+223
+00:31:11,200 --> 00:31:19,180
+[rushikesh]: if we try to do some pre-filling the pre-filling is a technique through which you can direct how the llm is going to respond
+
+224
+00:31:20,140 --> 00:31:27,680
+[rushikesh]: what i mean by that is if for example see if i put a question can you analyze the quarterly reports
+
+225
+00:31:28,320 --> 00:31:29,840
+[rushikesh]: here is my analysis
+
+226
+00:31:30,660 --> 00:31:41,980
+[rushikesh]: now when we try to give a prompt like this what is happening is we are telling ai agent or the nlm that ok you should continue this
+
+227
+00:31:42,400 --> 00:31:49,680
+[rushikesh]: yesterday we saw some examples where how nlm tries to do the continuation of the given tokens
+
+228
+00:31:50,380 --> 00:31:53,820
+[rushikesh]: same thing here is my analysis it will just continue this
+
+229
+00:31:53,860 --> 00:31:57,400
+[rushikesh]: if you see the assistant will say that here is my analysis based on this
+
+230
+00:31:57,400 --> 00:32:18,480
+[rushikesh]: so you can always prime the llm to respond in a specific structure you can even just continue what it should do how it should respond and it will just do that so this is called as a pre-filling or even a steering where you are saying how it should respond by just giving some specific tokens
+
+231
+00:32:18,940 --> 00:32:24,640
+[rushikesh]: okay we will see this also in more detail in the hands on in some time
+
+232
+02:47:12,528 --> 02:47:13,680
+[rushikesh]: any questions
+
+233
+00:32:29,060 --> 00:32:30,520
+[rushikesh]: any questions on this pieces
+
+234
+00:32:36,233 --> 00:32:37,280
+[rushikesh]: perfect great good
+
+235
+00:32:35,960 --> 00:32:36,233
+[rushikesh]: pieces
+
+236
+00:32:37,300 --> 00:32:44,280
+[rushikesh]: so now let me show you this like how this things looks into the picture
+
+237
+00:32:44,440 --> 00:32:50,520
+[rushikesh]: okay if you see these are the messages and this messages is what we pass to the llm
+
+238
+00:32:51,980 --> 00:32:56,500
+[rushikesh]: as a input we pass a system and a user
+
+239
+00:32:57,180 --> 00:33:00,140
+[rushikesh]: if you see system you are an expert or technical writer
+
+240
+00:33:00,560 --> 00:33:02,700
+[rushikesh]: so we are saying you are a technical writer
+
+241
+00:33:02,860 --> 00:33:04,500
+[rushikesh]: so this will be system prompt
+
+242
+00:33:04,860 --> 00:33:06,540
+[rushikesh]: usually this is hidden from the user
+
+243
+00:33:06,960 --> 00:33:11,540
+[rushikesh]: okay usually when we are building things we usually hide it from the user
+
+244
+00:33:11,980 --> 00:33:16,200
+[rushikesh]: so user will provide this as a question write documentation for this function
+
+245
+00:33:17,700 --> 00:33:34,780
+[rushikesh]: this too goes as an input to the llm and based on this then llm responds ok and major focus will be given to the system whatever system says that will be given more priority as compared to user
+
+246
+00:33:38,100 --> 00:33:44,580
+[rushikesh]: okay so now let me show you this part with the hands-on aspect
+
+247
+00:33:45,060 --> 00:33:47,660
+[rushikesh]: let's let me code these things
+
+248
+00:33:54,320 --> 00:33:54,820
+[rushikesh]: now
+
+249
+00:33:55,640 --> 00:33:56,700
+[rushikesh]: to code this
+
+250
+00:33:57,340 --> 00:33:58,820
+[rushikesh]: i would like to show you
+
+251
+00:33:59,440 --> 00:34:02,720
+[rushikesh]: 2 parts of the thing they will be implementing 2 types of models
+
+252
+00:34:02,720 --> 00:34:09,900
+[rushikesh]: 1 is the gemini model and i'll also show you how we can use the azure openai models
+
+253
+00:34:10,280 --> 00:34:12,780
+[rushikesh]: okay so let me show you 2 things
+
+254
+00:34:12,780 --> 00:34:16,640
+[rushikesh]: 1 is the gemini model which we did yesterday
+
+255
+00:34:16,640 --> 00:34:54,820
+[rushikesh]: we will just continue that same thing i will be installing the mobile generative line chain and let me also add line chain open ai okay there is a hyphen queue which basically says don't show the output keep it quiet so this will do the installation let me also put the key so we will first set up the
+
+256
+00:35:03,920 --> 00:35:16,380
+[rushikesh]: so this is done so now let me do this and show you how we can set up the system prompt first with the google's library
+
+257
+00:35:17,460 --> 00:35:51,540
+[rushikesh]: okay we're going with to flash model and with the to flash model we complete setup if i just have to go to the code see first we have set up the key which is a important part then second we are importing the google libraries this is a google client which we are creating genai.client and then we say client.models.generatecontent this is if you use this you will use this only when you are trying to directly use the google's library
+
+258
+00:35:51,760 --> 00:35:55,780
+[rushikesh]: okay response equal to and response if you see this will be the response
+
+259
+00:35:56,040 --> 00:36:04,760
+[rushikesh]: this response contains the output and also the number of tokens total tokens 11
+
+260
+00:36:04,860 --> 00:36:09,360
+[rushikesh]: so it just comes up with the overall token level description
+
+261
+00:36:10,600 --> 00:36:14,340
+[rushikesh]: the next is just a testing
+
+262
+00:36:16,400 --> 00:36:39,900
+[rushikesh]: now let me show you how we can do like what kind of things will go in the system problem okay so let's say we are building an e-commerce customer service bot in this case so if we go with the e-commerce based service bot 1 thing you will see is we are now defining the instruction like how this bot should respond
+
+263
+00:36:40,520 --> 00:36:45,440
+[rushikesh]: you are a customer service representative for some shop and online electronics retailer
+
+264
+00:36:45,920 --> 00:36:50,820
+[rushikesh]: your responsibilities help customers with order inquiries return and product questions
+
+265
+00:36:51,480 --> 00:36:53,400
+[rushikesh]: be friendly professional concise
+
+266
+00:36:53,940 --> 00:36:57,140
+[rushikesh]: for refund request inform customers about our 30-day policy
+
+267
+00:36:57,340 --> 00:37:01,140
+[rushikesh]: if you don't know something offer to connect them with a specialist
+
+268
+00:37:01,840 --> 00:37:07,100
+[rushikesh]: company policy 30 day return window 15 day return policy and free shipping
+
+269
+00:37:07,120 --> 00:37:17,380
+[rushikesh]: now this is our system prompt which provides the whole context all the responsibilities and all the data which is required
+
+270
+00:37:18,640 --> 00:37:23,380
+[rushikesh]: now let's talk about how do we go with the customer queries
+
+271
+00:37:25,440 --> 00:37:28,820
+[rushikesh]: now these are some customer queries and this will be now user prompt
+
+272
+00:37:29,700 --> 00:37:34,140
+[rushikesh]: okay hi i ordered a laptop 3 weeks ago and i want to return it it's still sealed
+
+273
+00:37:34,440 --> 00:37:36,340
+[rushikesh]: what's your free shipping threshold
+
+274
+00:37:36,900 --> 00:37:38,860
+[rushikesh]: the tv i bought had a dead pixel
+
+275
+00:37:38,980 --> 00:37:39,820
+[rushikesh]: what can i do
+
+276
+00:37:39,820 --> 00:37:42,540
+[rushikesh]: so all of these are now user prompts
+
+277
+00:37:43,080 --> 00:37:44,940
+[rushikesh]: we will look through each of this
+
+278
+00:37:46,980 --> 00:37:53,160
+[rushikesh]: and let me show you how we can define the system and user prompt with google library ok
+
+279
+00:37:53,460 --> 00:38:20,040
+[rushikesh]: in google library when we are doing the generate ok so this is a generate part client we are looping through all the queries every single query we are doing a for loop after that here we are saying client dot models dot generate content model equal to this 1 config this is the additional part this config generate content config types dot generate content config we have this system instruction
+
+280
+00:38:21,900 --> 00:38:32,460
+[rushikesh]: okay we have to pass the system instruction separately as part of a config and then contents equal to the query the query which we want the user query
+
+281
+00:38:32,660 --> 00:38:34,980
+[rushikesh]: so system prompt will have a more priority
+
+282
+00:38:35,740 --> 00:38:43,160
+[rushikesh]: ok system prompt will have a more priority so that all the things which we have discussed here will be given a more priority
+
+283
+00:38:43,380 --> 00:38:49,460
+[rushikesh]: so even if user tries to override something this will still be a given more importance
+
+284
+00:38:50,280 --> 00:38:59,880
+[rushikesh]: so when we run this this finally is our ai response
+
+285
+00:39:00,480 --> 00:39:02,220
+[rushikesh]: okay this is our ai message
+
+286
+00:39:03,940 --> 00:39:08,160
+[rushikesh]: so customer then agent response i am sorry to hear about the dead pixels
+
+287
+00:39:08,160 --> 00:39:13,940
+[rushikesh]: so what is happening is the agent is all going to respond based on the system message instructions
+
+288
+00:39:15,660 --> 00:39:20,420
+[rushikesh]: so agent is going to respond based on purely the system instructions
+
+289
+00:39:22,060 --> 00:39:24,940
+[rushikesh]: let me also show you how we try to implement this in a lanchain
+
+290
+00:39:25,120 --> 00:39:29,480
+[rushikesh]: lanchain will become more easy to see and understand
+
+291
+00:39:30,060 --> 00:39:34,320
+[rushikesh]: so let me show you how the same thing will go in the line chain
+
+292
+00:39:35,280 --> 00:39:44,760
+[rushikesh]: now with line chain we have this messages line chain core.messages system message human message and the ai message
+
+293
+00:39:47,000 --> 00:39:59,880
+[rushikesh]: in line chain we go with an another object ok chart google generative ai name of the model and the temperature we can pass all of this to this
+
+294
+00:40:00,760 --> 00:40:11,900
+[rushikesh]: and then we can define system and human message something like this where we say a list of messages
+
+295
+00:40:13,940 --> 00:40:31,800
+[rushikesh]: so this is a list of messages and within the list of messages we pass system message content you are a helpful financial advisor assistant provide clear actionable advice this becomes our system prompt
+
+296
+00:40:32,700 --> 00:41:05,140
+[rushikesh]: human message i have 10 000 dollars to invest i am 30 years old and have moderate withdrawal events system message will be the priority then human message we are giving actual question which we want to ask and this in line chain is directly passed as a input to the invoke ok llm dot invoke list of messages ok llm dot invoke list of messages
+
+297
+00:41:05,380 --> 00:41:28,380
+[rushikesh]: so we can just pass in all the messages and this will be able to respond and the response of the llm ok in line chain is going to be it is i think creating a lengthy output because we are not set any limit in terms of the output ok
+
+298
+00:41:28,380 --> 00:41:34,340
+[rushikesh]: so this is what we see a lengthy output that it has come up with
+
+299
+00:41:34,340 --> 00:41:38,500
+[rushikesh]: ok if you don't provide any restrictions we will discuss more on this again in some time
+
+300
+00:41:38,500 --> 00:41:40,620
+[rushikesh]: but if i take the response object
+
+301
+00:41:44,460 --> 00:41:49,800
+[rushikesh]: ok what you see is this is a type of ai message
+
+302
+00:41:50,660 --> 00:41:54,260
+[rushikesh]: okay this is a type of ai message
+
+303
+00:41:54,320 --> 00:41:56,140
+[rushikesh]: so the response is the ai message
+
+304
+00:41:56,480 --> 00:41:59,060
+[rushikesh]: we have a system message we have a human message
+
+305
+00:41:59,060 --> 00:42:02,540
+[rushikesh]: so all these 3 are doing rounds
+
+306
+00:42:03,300 --> 00:42:17,860
+[rushikesh]: so 1 thing that we can now do is just to show you we can create a stack of messages when we build a chatbot we will see that over the future but all these messages will work like this
+
+307
+00:42:18,480 --> 00:42:22,760
+[rushikesh]: after the first response we will have a ai message
+
+308
+00:42:23,800 --> 00:42:26,240
+[rushikesh]: then we will again have a human message
+
+309
+00:42:27,980 --> 00:42:30,940
+[rushikesh]: then we will tell the model that okay see this was a system prompt
+
+310
+00:42:30,960 --> 00:42:32,120
+[rushikesh]: this is the first question
+
+311
+00:42:32,540 --> 00:42:33,780
+[rushikesh]: this is what you responded
+
+312
+00:42:34,300 --> 00:42:54,180
+[rushikesh]: now i want to ask you 1 more question then we again will have a ai message which will be the response then again we can ask a follow up question so when you are asking a follow up question every time all the previous context will go to the llm in asking that question
+
+313
+00:42:54,840 --> 00:43:05,560
+[rushikesh]: okay in llms when we are working with chatbot what really happens is every new question llms don't store any history
+
+314
+00:43:06,500 --> 00:43:09,920
+[rushikesh]: okay llms are just a pure input output models
+
+315
+00:43:09,920 --> 00:43:12,580
+[rushikesh]: whatever you give as a prompt it will try to respond
+
+316
+00:43:12,880 --> 00:43:15,780
+[rushikesh]: they don't remember any history
+
+317
+00:43:16,340 --> 00:43:17,780
+[rushikesh]: there is no back end history
+
+318
+00:43:18,420 --> 00:43:33,660
+[rushikesh]: so if you are asking a follow up question you have to provide all the history again by yourself saying earlier i asked you this you gave me this now i want to ask you this again
+
+319
+00:43:34,280 --> 00:43:43,120
+[rushikesh]: so this like every time if there is a second third question you have to pass in the question answers of both the previous questions
+
+320
+00:43:43,620 --> 00:43:47,060
+[rushikesh]: till that point otherwise ai will not be able to understand
+
+321
+00:43:47,280 --> 00:43:52,680
+[rushikesh]: okay we will build this as a chat board in some time we will come to that
+
+322
+00:43:52,680 --> 00:43:56,880
+[rushikesh]: are you guys with me on the human user and ai message
+
+323
+00:44:00,560 --> 00:44:00,820
+[rushikesh]: yes no
+
+324
+00:44:00,820 --> 00:44:00,950
+[rushikesh]: everyone
+
+325
+00:44:00,950 --> 00:44:22,240
+[rushikesh]: yes no everyone others pari yashwant anushka you guys are with me anushka
+
+326
+00:44:29,640 --> 00:44:31,400
+[rushikesh]: i will continue
+
+327
+00:44:34,700 --> 00:44:41,700
+[rushikesh]: now what we will do is i'll also show you like over the next week you will all have access to azure openai
+
+328
+00:44:42,280 --> 00:44:47,320
+[rushikesh]: so i will now show you like how we can configure the model from azure openai
+
+329
+00:44:47,540 --> 00:44:51,980
+[rushikesh]: ok if we have to set up the model with respect to azure openai because this we did with gemini
+
+330
+00:44:52,200 --> 00:44:54,940
+[rushikesh]: so we will now do it with azure openai
+
+331
+00:44:54,960 --> 00:44:58,940
+[rushikesh]: so for azure openai you will all get access to azure portal
+
+332
+00:45:00,460 --> 00:45:04,780
+[rushikesh]: ok you will all get next week or end of the coming week
+
+333
+00:45:05,540 --> 00:45:09,860
+[rushikesh]: you will all get an access and this is a service in azure called as a foundry service
+
+334
+00:45:10,960 --> 00:45:12,680
+[rushikesh]: the service is called as a foundry
+
+335
+00:45:24,450 --> 00:45:30,280
+[rushikesh]: service we have different models that we can host in this
+
+336
+00:45:30,480 --> 00:45:31,720
+[rushikesh]: okay i will go with
+
+337
+00:45:31,940 --> 00:45:35,340
+[rushikesh]: so there are different names that we can provide
+
+338
+00:45:35,380 --> 00:45:38,200
+[rushikesh]: now this is usually which we will be using in the class
+
+339
+00:45:39,480 --> 00:45:43,060
+[rushikesh]: but this comes up with various models
+
+340
+00:45:43,820 --> 00:45:48,620
+[rushikesh]: there are different models which are available in this
+
+341
+00:45:48,980 --> 00:46:01,240
+[rushikesh]: so gpt 4.1 gpt 5 mini this is embedding model clod models they recently started with the clod models but clod has a separate pricing structure
+
+342
+00:46:02,200 --> 00:46:23,700
+[rushikesh]: so we will not be going with the cloud we will be sticking with the open ai models so these are all the different models which i which we have we will go with gpt 4.1 ok for our work today so let us see how we can set up the azure openai model with lanchain lanchain azure openai
+
+343
+00:46:24,520 --> 00:46:32,260
+[rushikesh]: if you are not using lanchain if you want to see like how we can directly use see they come up with a complete example directly
+
+344
+00:46:32,620 --> 00:46:34,820
+[rushikesh]: the way we have a separate library for google
+
+345
+00:46:35,540 --> 00:46:38,440
+[rushikesh]: similarly there is a separate library for openai
+
+346
+00:46:39,140 --> 00:46:40,900
+[rushikesh]: okay there is an openai library
+
+347
+00:46:41,820 --> 00:46:58,440
+[rushikesh]: so you have to use the openai library separately to create a client again the way we did it in google 1 then this installation of open is required before you execute this and to run it you will have again some kind of a structure
+
+348
+00:46:58,440 --> 00:46:59,780
+[rushikesh]: you see that there is a message
+
+349
+00:47:00,540 --> 00:47:31,300
+[rushikesh]: okay same thing that we see just now there are messages of system message user message and we can pass this message as a input to the system and let it come up with a response so we will not use this but we will have an example on this we will be sticking with lanchain so let me show you lanchain now with the lanchain we need to install this library lanchain openair which we have already done
+
+350
+00:47:31,640 --> 00:47:33,420
+[rushikesh]: next we need to set up the credentials
+
+351
+00:47:34,160 --> 00:47:40,120
+[rushikesh]: now this will come up with some 2 to 3 set of credentials that we need to set up
+
+352
+00:47:40,120 --> 00:47:47,860
+[rushikesh]: so let me set those there first i'll come to the code
+
+353
+00:47:49,940 --> 00:48:00,700
+[rushikesh]: let me say azure model setup
+
+354
+00:48:02,060 --> 00:48:04,700
+[rushikesh]: let me set the keys this whole thing is not required
+
+355
+00:48:11,100 --> 00:48:43,140
+[rushikesh]: we will put the value for this and then we need to pass in azure deployment and azure api version os.environ azure deployment name and os.environ azure api version
+
+356
+00:48:44,100 --> 00:48:48,760
+[rushikesh]: okay these are the 4 different keys which are required when we are using azure openai
+
+357
+00:48:48,760 --> 00:48:51,800
+[rushikesh]: so let me put this keys like put this values 1 by 1
+
+358
+00:48:51,820 --> 00:48:56,280
+[rushikesh]: so where we get this values is this is 1 api key
+
+359
+00:48:56,280 --> 00:49:01,220
+[rushikesh]: so i'll just copy this api key and put this api key
+
+360
+00:49:01,840 --> 00:49:04,620
+[rushikesh]: the endpoint is this thing
+
+361
+00:49:04,620 --> 00:49:06,520
+[rushikesh]: ok this thing is called as an endpoint
+
+362
+00:49:06,560 --> 00:49:09,720
+[rushikesh]: so we have to pick up only till this part
+
+363
+00:49:10,320 --> 00:49:11,620
+[rushikesh]: so this becomes our
+
+364
+00:49:12,620 --> 00:49:18,580
+[rushikesh]: endpoint the deployment name is nothing but this name of the model that we give
+
+365
+00:49:22,580 --> 00:49:28,060
+[rushikesh]: okay after this there is an api version api version becomes part of this thing
+
+366
+00:49:28,320 --> 00:49:34,620
+[rushikesh]: we can just copy this api version from here and put it
+
+367
+00:49:35,500 --> 00:49:38,220
+[rushikesh]: so this becomes the api version
+
+368
+00:49:38,480 --> 00:49:45,140
+[rushikesh]: now once these keys are set up let me go back here we need to import this thing
+
+369
+00:49:48,860 --> 00:50:00,300
+[rushikesh]: and this values let me and this values let me change it with this will be the deployment and this will be the api version
+
+370
+00:50:07,900 --> 00:50:23,220
+[rushikesh]: now just to test it we need to do llm.invoke just to check and validate we will say hello perfect so if you see we have got a response from this llm dot invoke
+
+371
+00:50:23,240 --> 00:50:24,740
+[rushikesh]: now invoke takes 2 things
+
+372
+00:50:25,840 --> 00:50:30,580
+[rushikesh]: okay even if i'm saying hello it was able to recognize that i'm asking it hello
+
+373
+00:50:31,600 --> 00:50:38,440
+[rushikesh]: okay so yeah so this is the response with respect to the azure model
+
+374
+00:50:38,720 --> 00:50:42,680
+[rushikesh]: so over the future we will be using azure modeling for all the activities
+
+375
+00:50:42,980 --> 00:50:46,240
+[rushikesh]: ok so you guys can all try it out once
+
+376
+00:50:47,060 --> 00:50:47,560
+[rushikesh]: ok
+
+377
+00:55:34,380 --> 00:55:39,040
+[rushikesh]: just change it to hello not the hell
+
+378
+00:56:47,060 --> 00:56:48,880
+[rushikesh]: so let me move down to the ppt
+
+379
+00:56:53,180 --> 00:56:53,680
+[rushikesh]: see
+
+380
+00:58:43,400 --> 00:58:46,420
+[malavika]: i'm getting an error in the lang chain approach
+
+381
+01:20:35,440 --> 01:20:42,540
+[rushikesh]: hello perfect ok good but yeah are you all with me on the structure of the 7 components
+
+382
+01:20:46,880 --> 01:20:58,840
+[rushikesh]: ok we will see some more examples around this but for now it's more theoretical understanding in terms of what are the different possible components that we can have
+
+383
+01:21:00,420 --> 01:21:03,780
+[rushikesh]: this 7 components will keep coming in our different
+
+384
+01:21:04,900 --> 01:21:07,320
+[rushikesh]: example that we will be keep doing over the future
+
+385
+01:21:09,840 --> 01:21:13,640
+[rushikesh]: ok but if any questions please let me know
+
+386
+01:21:16,880 --> 01:21:19,160
+[rushikesh]: so we'll move on to the next section
+
+387
+01:21:19,860 --> 01:21:26,180
+[rushikesh]: which are 2 different sections related to 0 short prompting and few short prompting
+
+388
+01:21:27,280 --> 01:21:35,520
+[rushikesh]: so 0 short prompting basically means when you are prompting you don't give any examples
+
+389
+01:21:36,380 --> 01:21:48,780
+[rushikesh]: okay you don't give any examples you're asking the model to perform a task without providing any examples relying purely on the training knowledge that it internally has
+
+390
+01:21:48,940 --> 01:21:51,260
+[rushikesh]: okay we will see some examples on this
+
+391
+01:21:51,500 --> 01:21:57,540
+[rushikesh]: so this is usually best for some simple tasks where you want to do some quick prototyping
+
+392
+01:21:58,440 --> 01:22:04,660
+[rushikesh]: examples are not available for certain things and where you want to do explanatory work from the model
+
+393
+01:22:05,380 --> 01:22:11,980
+[rushikesh]: so some examples we can see is write about dogs
+
+394
+01:22:13,080 --> 01:22:34,560
+[rushikesh]: so we can just say that write a 150 word description of the gold retriever as family pairs in this case when we say 0 short prompting what is really happening is all of this knowledge ok what we are expecting as output is all going to come from the model's internal knowledge
+
+395
+01:22:35,200 --> 01:22:38,160
+[rushikesh]: okay this is 150 more description of the golden retriever
+
+396
+01:22:38,440 --> 01:22:39,680
+[rushikesh]: now we assume
+
+397
+01:22:41,380 --> 01:22:45,800
+[rushikesh]: llm already has a good knowledge about the golden retrievers
+
+398
+01:22:46,580 --> 01:22:50,140
+[rushikesh]: we don't need to provide anything as an extra context
+
+399
+01:22:50,580 --> 01:22:54,640
+[rushikesh]: so we are directly asking a question without even providing any context
+
+400
+01:22:55,080 --> 01:22:57,380
+[rushikesh]: so that is called as a zero-shot prompting
+
+401
+01:22:57,780 --> 01:23:04,100
+[rushikesh]: in zero-shot we are purely leveraging the internal knowledge of the llm
+
+402
+01:23:04,640 --> 01:23:09,880
+[rushikesh]: to make best use of the zero-shot you have to be very specific in terms of what you are asking
+
+403
+01:23:10,120 --> 01:23:13,300
+[rushikesh]: you need to use clear action verbs
+
+404
+01:23:13,420 --> 01:23:15,040
+[rushikesh]: okay like what you really want to do
+
+405
+01:23:15,040 --> 01:23:16,000
+[rushikesh]: do you want to summarize
+
+406
+01:23:16,000 --> 01:23:21,580
+[rushikesh]: do you want to get a list do you want to compare multiple things do you want to explain certain things
+
+407
+01:23:21,580 --> 01:23:27,320
+[rushikesh]: so all of this as a clear verb plays a very important role when you are building a zero-shot system
+
+408
+01:23:27,720 --> 01:23:31,440
+[rushikesh]: you have to specify what is the expected output format
+
+409
+01:23:31,640 --> 01:23:38,820
+[rushikesh]: okay in this case we are seeing a word description of golden retriever but you can say bullet point numbered list anything
+
+410
+01:23:39,400 --> 01:23:45,140
+[rushikesh]: 0 shot is a most commonly used pattern when we are doing the prompting
+
+411
+01:23:45,800 --> 01:23:56,260
+[rushikesh]: 0 shot is not like let me just it's not just about lazy prompting but it's like defining a prompt which is effective
+
+412
+01:23:56,820 --> 01:24:03,140
+[rushikesh]: so the whole goal is we are trying to limit to the knowledge that is coming from the llm internal knowledge
+
+413
+01:24:03,960 --> 01:24:09,400
+[rushikesh]: on the other hand there is 1 more strategy called as the few short prompting
+
+414
+01:24:10,400 --> 01:24:18,820
+[rushikesh]: in few short prompting our goal is to teach the system by providing some external input output example pair
+
+415
+01:24:18,820 --> 01:24:26,260
+[rushikesh]: this is what we discussed in the 7 component strategy that examples have a high impact
+
+416
+01:24:26,320 --> 01:24:51,440
+[rushikesh]: so in this strategy we provide examples to the system that okay example 1 translate the french and we provide a example ok so french translation should look like this again 1 more example translate to french good morning we provide 1 more example we provide 1 more example translate to french this and this and then we ask it a question and ask it to generate a response
+
+417
+01:24:52,000 --> 01:24:56,600
+[rushikesh]: so here the system already has seen what we expect
+
+418
+01:24:57,720 --> 01:25:07,780
+[rushikesh]: when we do this even if you don't provide any prompt and just give an example and ask it directly it will give you a direct output
+
+419
+01:25:08,300 --> 01:25:13,760
+[rushikesh]: so this is called as the few short prompt short is nothing but providing examples
+
+420
+01:25:15,040 --> 01:25:21,440
+[rushikesh]: so here we are giving the set of examples through the system so that it can use that and come up with the response
+
+421
+01:25:21,940 --> 01:25:32,060
+[rushikesh]: so it's very good when you want to showcase like you have some examples to showcase and you want some specific outputs formats to be followed
+
+422
+01:25:32,620 --> 01:25:35,660
+[rushikesh]: so there this thing plays a very important role
+
+423
+01:25:36,980 --> 01:25:40,580
+[rushikesh]: let's see both of this in action over the code
+
+424
+01:25:41,040 --> 01:25:43,900
+[rushikesh]: okay so both few shot and multi shot
+
+425
+01:25:54,100 --> 01:25:54,531
+[rushikesh]: let me now as part of a code
+
+426
+01:25:54,531 --> 01:25:54,638
+[rushikesh]: okay so
+
+427
+01:25:54,638 --> 01:25:56,540
+[rushikesh]: let me now do a short prompting
+
+428
+01:25:58,420 --> 01:26:07,860
+[rushikesh]: so for 0 short let us look at some resume screening system
+
+429
+01:26:08,240 --> 01:26:13,540
+[rushikesh]: so what we will do is we will define some resume skill sets
+
+430
+01:26:14,320 --> 01:26:25,940
+[rushikesh]: okay so there are resumes the 5 year experience in python django mba from harvard graphic designer with expertise in figma data scientist skilled in ml and then there are some job categories
+
+431
+01:26:26,600 --> 01:26:31,860
+[rushikesh]: there is a software engineer there is a product manager there is a design data science marketing
+
+432
+01:26:32,660 --> 01:26:40,620
+[rushikesh]: what we want the system to do is we wanted to map the resumes to the given job categories
+
+433
+01:26:42,540 --> 01:26:45,240
+[rushikesh]: yesterday we used embedding and all to do that
+
+434
+01:26:45,240 --> 01:26:49,680
+[rushikesh]: but here we are directly going to use nlm to identify this
+
+435
+01:26:50,220 --> 01:26:54,160
+[rushikesh]: ok how we do that is we will create a function
+
+436
+01:26:57,180 --> 01:27:01,340
+[rushikesh]: in function we say this is a 0 short classified
+
+437
+01:27:02,500 --> 01:27:11,920
+[rushikesh]: and there is no example we directly say these are the categories we just merge all the categories into 1 single string comma separated string of all these job categories
+
+438
+01:27:12,880 --> 01:27:35,260
+[rushikesh]: then we create a prompt and within the prompt we say classify the following text into 1 of the categories which is nothing but the set of categories then we provide the text as the input and then this is the pre-filling strategy that we discussed where we just say category colon and it will provide us the category
+
+439
+01:27:37,660 --> 01:27:41,900
+[rushikesh]: this is function and now let's run this function in a loop
+
+440
+01:27:47,140 --> 01:27:50,140
+[rushikesh]: okay so what we will do is we are now looping through the resumes
+
+441
+01:27:50,940 --> 01:27:58,820
+[rushikesh]: in the looping through resumes we are saying 0 short classify this is a resume text and these are the job categories
+
+442
+01:27:58,980 --> 01:28:03,380
+[rushikesh]: now this run and provide a job category to me
+
+443
+01:28:05,740 --> 01:28:10,420
+[rushikesh]: ok if you see it comes up with the job category
+
+444
+01:28:10,640 --> 01:28:14,880
+[rushikesh]: ok this is the resume category category software engineering
+
+445
+01:28:15,700 --> 01:28:25,580
+[rushikesh]: ok though this was our original input and from this it will be able to easily map it to what role it is
+
+446
+01:28:25,920 --> 01:28:31,720
+[rushikesh]: so this knowledge is all coming from the internal knowledge of the system
+
+447
+01:28:32,940 --> 01:28:48,380
+[rushikesh]: ok we are assuming nlm already knows about software engineering product management design data science marketing we assume that and we directly ask it okay now based on your knowledge you tell me which 1 is what
+
+448
+01:28:49,600 --> 01:28:51,000
+[rushikesh]: let us see 1 more example
+
+449
+01:28:54,180 --> 01:29:01,200
+[rushikesh]: so this is 1 of the classic examples with respect to the nlp in the whole nlp domain
+
+450
+01:29:01,200 --> 01:29:05,240
+[rushikesh]: this is 1 of the classic examples for the 0 short prompting
+
+451
+01:29:05,820 --> 01:29:10,640
+[rushikesh]: in 0 short what we are saying is these are the different reviews of the customers
+
+452
+01:29:12,820 --> 01:29:18,560
+[rushikesh]: now you tell me what are what is the sentiment
+
+453
+01:29:19,320 --> 01:29:22,120
+[rushikesh]: okay is it positive negative neutral mixed
+
+454
+01:29:22,120 --> 01:29:23,760
+[rushikesh]: we're still using the same function
+
+455
+01:29:24,140 --> 01:29:26,020
+[rushikesh]: ok we are using the same function
+
+456
+01:29:26,400 --> 01:29:32,760
+[rushikesh]: we will pass the text and the category where it will be able to help us in getting that category marked
+
+457
+01:29:33,700 --> 01:29:38,160
+[rushikesh]: so positive negative neutral and mixed
+
+458
+01:29:40,440 --> 01:29:49,640
+[rushikesh]: okay so if you see system understands very well that okay when we say disappointed incredible it just tags it as positive disappointed tags it as negative
+
+459
+01:29:50,060 --> 01:29:55,980
+[rushikesh]: it's okay neutral best purchase positive good build quality mixed
+
+460
+01:29:56,480 --> 01:30:01,320
+[rushikesh]: so it just understands all of it and gives us the response
+
+461
+01:30:02,140 --> 01:30:07,320
+[rushikesh]: so 0 short is leveraging the internal knowledge of llms
+
+462
+01:30:08,800 --> 01:30:14,720
+[rushikesh]: now let me show you the other part of it which is the few-shot examples
+
+463
+01:30:15,640 --> 01:30:45,200
+[rushikesh]: okay to build the few short examples let me show you how we can build some few short examples let me tag it as few short ok now these are some examples if you see now cto of a 500 person company budget approved needs solution disquoted
+
+464
+01:30:46,000 --> 01:30:47,780
+[rushikesh]: now we are saying hot lead
+
+465
+01:30:48,240 --> 01:30:49,740
+[rushikesh]: now this is a lead system
+
+466
+01:30:49,760 --> 01:31:10,440
+[rushikesh]: lead system means what we are saying is whether he is a good customer for us or not and we are creating our custom categories ok now if i ask model directly you are passing this title and telling it that okay hot lead warm lead cold lead you tell me which 1 is this
+
+467
+01:31:32,960 --> 01:31:35,040
+[rushikesh]: do you think model will be able to say that
+
+468
+01:31:17,040 --> 01:31:17,640
+[rushikesh]: you think
+
+469
+01:31:18,260 --> 01:31:29,640
+[rushikesh]: will it be able to understand directly that if i do not give anything i just pass it directly as this question and say i have 3 categories hot lead warm lead cold lead
+
+470
+01:31:30,140 --> 01:31:32,060
+[rushikesh]: what do you think which 1 of the cities
+
+471
+01:31:46,980 --> 01:31:48,200
+[rushikesh]: you are saying no sherlin
+
+472
+01:31:49,060 --> 01:31:52,120
+[rushikesh]: but why do you think no sherlyn in this case
+
+473
+01:31:55,640 --> 01:31:58,360
+[rushikesh]: any reason like what's your
+
+474
+01:32:00,340 --> 01:32:00,840
+[rushikesh]: thought
+
+475
+01:32:02,820 --> 01:32:04,900
+[rushikesh]: like for the no for this
+
+476
+01:32:10,800 --> 01:32:46,240
+[rushikesh]: what is happening here is this is a definition of 1 type of person this is a definition of 1 type of person this is a definition of 1 type of person this is a definition of 1 type of person so in this what is happening is people who are in the very senior management are being treated as a hot lead okay people from the marketing are being treated as a warm lead like manager and all like very senior people are treated as a hot lead medium senior people are treated as a warm lead and student and all are treated just as a cold lead cold lead means they are not useful
+
+477
+01:32:46,740 --> 01:32:48,840
+[rushikesh]: so these are just a definition of people
+
+478
+01:32:49,160 --> 01:33:00,080
+[rushikesh]: so nlm cannot judge that what we really want who is a hot lead for us and who is not a hot lead for us we have to either specify in the prompt or some description
+
+479
+01:33:00,720 --> 01:33:04,500
+[rushikesh]: but here if you directly pass it it will not be able to understand that
+
+480
+01:33:04,960 --> 01:33:17,540
+[rushikesh]: but rather to provide it as a prompt if you directly give it as an example that see these type of people are hot lead this type of people are warm lead this type of people are cold lead for us
+
+481
+01:33:18,060 --> 01:33:24,660
+[rushikesh]: it will be able to make and understand this and provide a classification directly
+
+482
+01:33:25,840 --> 01:33:50,840
+[rushikesh]: to do this kind of things previously over many years we have to build some complex set of ll models to build this kind of a classification we have to build 1 2 months timeline build some complex ml models then we used to get this kind of a category but with nlm all those things have become much more faster
+
+483
+01:33:52,060 --> 01:34:03,980
+[rushikesh]: okay so this is a few short classifier this takes the text as input examples and categories all of these are coming as input within the inside the function what we are doing is we are first merging the categories
+
+484
+01:34:04,460 --> 01:34:08,940
+[rushikesh]: the categories are nothing but the 3 categories which we have
+
+485
+01:34:11,320 --> 01:34:14,380
+[rushikesh]: okay so this is a hot lead warm lead and cold lead
+
+486
+01:34:14,380 --> 01:34:16,340
+[rushikesh]: these are the 3 categories which we have
+
+487
+01:34:16,340 --> 01:34:23,160
+[rushikesh]: we join all these categories and then we build a example strategy here
+
+488
+01:34:23,440 --> 01:34:33,580
+[rushikesh]: example strategy means we are creating a string the string is lead lead details qualification category details
+
+489
+01:34:33,580 --> 01:34:34,660
+[rushikesh]: we are creating strings
+
+490
+01:34:35,200 --> 01:34:38,940
+[rushikesh]: we are iterating through the loop of this lead examples
+
+491
+01:34:39,900 --> 01:34:49,620
+[rushikesh]: by iterating we are creating the strings which are nothing but just strings which says lead lead detail qualification category detail
+
+492
+01:34:49,940 --> 01:34:53,040
+[rushikesh]: if you remember this is a dictionary comprehension in python
+
+493
+01:34:53,320 --> 01:34:54,840
+[rushikesh]: sorry this is a list comprehension
+
+494
+01:34:55,640 --> 01:35:20,280
+[rushikesh]: okay this much of a part is called in the list comprehension as part of the python learning that we did last week and we try to join them using we try to join them using the new lines ok so this becomes a list of examples which we pass in and then all of this we try to merge it here in a prompt
+
+495
+01:35:20,600 --> 01:35:24,120
+[rushikesh]: we say qualify sales lead into 1 of these categories
+
+496
+01:35:25,080 --> 01:35:26,600
+[rushikesh]: okay this is a list of categories
+
+497
+01:35:27,160 --> 01:35:30,640
+[rushikesh]: then we have an example string
+
+498
+01:35:31,320 --> 01:35:58,040
+[rushikesh]: example string is nothing but a list of just lead examples then we are saying now this is a new lead now tell me what is the qualification for this new lead let's run this with some examples now we will bring in a new set of leads ceo of a startup intern collecting information director of operations founder with 10 employees
+
+499
+01:36:04,200 --> 01:36:37,400
+[rushikesh]: okay now what we do here is we run this and here for ceo starter it says hot lead because he has raised the series a so it says hot lead and it also comes up with a reason ok we didn't ask for this but it has come up with its own reason that decision maker budget available urgency if you see we have not defined any of this as a category nlm has understood those things all based on the given example
+
+500
+01:36:38,300 --> 01:36:43,000
+[rushikesh]: okay that he is a decision maker he has a budget he has urgency
+
+501
+01:36:43,100 --> 01:36:48,140
+[rushikesh]: so all of the things it is trying to understand just based on the given examples
+
+502
+01:36:49,400 --> 01:36:53,260
+[rushikesh]: intern collecting information for their manager this is a cold lead
+
+503
+01:36:54,480 --> 01:36:58,780
+[rushikesh]: director of operations interested but budget is next year
+
+504
+01:36:59,060 --> 01:37:02,460
+[rushikesh]: so based on the budget it says is a cold lead
+
+505
+01:37:02,780 --> 01:37:12,420
+[rushikesh]: although there is an interest the budget is not available until the q3 that's why the stacking it has automatically cold lead even if he's a senior managing person
+
+506
+01:37:13,580 --> 01:37:16,620
+[rushikesh]: foundry with 10 employees urgent need budget constraints
+
+507
+01:37:16,640 --> 01:37:19,260
+[rushikesh]: again this goes a long way
+
+508
+01:37:19,280 --> 01:37:36,100
+[rushikesh]: so if you see even if we just provided examples without any descriptions nlns using this few short strategy can understand by itself just by mapping what you are trying to do based on the multiple examples
+
+509
+01:37:37,140 --> 01:37:42,220
+[rushikesh]: okay so this becomes the few shot strategy
+
+510
+01:37:46,600 --> 01:37:49,420
+[rushikesh]: any questions on the few shot and 0 shot
+
+511
+01:37:51,820 --> 01:38:00,200
+[rushikesh]: few shot plays a very important role in lot of situations where you can't explain everything through the prompt to the system
+
+512
+01:38:00,700 --> 01:38:12,880
+[rushikesh]: okay where it becomes difficult to explain everything through the prompt and then you can just provide a description and model will be able to do wonders just by learning through the patterns
+
+513
+01:38:24,140 --> 01:38:24,400
+[rushikesh]: me
+
+514
+01:38:24,400 --> 01:38:26,620
+[rushikesh]: everyone with me not with me
+
+515
+01:38:30,720 --> 01:38:32,100
+[rushikesh]: awesome great
+
+516
+01:38:32,460 --> 01:38:53,240
+[rushikesh]: so i think let's take 10 minutes break okay we will be back and then we can again continue to do it like i will come up i will show 1 more example you guys can do it and then we will move on to the next content ok so let's take a break of 10 minutes and be back is it fine
+
+517
+01:38:57,380 --> 01:39:25,940
+[malavika]: i had a question so when we are charged by the number of tokens which we pass to the llm this is the underlying thing now when we are using 0 short my tokens are way less as compared to few short or you know because of the examples the more number of examples or tokens i'm passing i'm incurring more cost
+
+518
+01:39:29,480 --> 01:39:59,840
+[malavika]: so when we are proposing any kind of you know prompting technique and the customer is very cost conscious so do you think it's a good approach to no doubt few shorters more going to be more precise and in giving the responses but do you think this is a good approach if the if the customers are more cost conscious
+
+519
+01:40:00,940 --> 01:40:19,900
+[rushikesh]: right see the thing is we can even measure the tokens with respect to each of the approach okay i think see when we are doing a development we have a freedom to try out all the approach and see where we are getting a better output with a better token strategy
+
+520
+01:40:20,280 --> 01:40:51,880
+[rushikesh]: let's say 0 shot you start with the 0 shot you give a very basic problem to describe what you really want and if the system is able to understand and provide you accurate outputs then 0 shot is a good 1 based on the knowledge if it is able to map it and provide a response that's a good 1 but there are situations where you have like lot of edge cases you have lot of varieties and describing every single thing with the prompt is sometimes not feasible
+
+521
+01:40:53,620 --> 01:41:10,580
+[rushikesh]: then you can go with the few shots if you think you want to write 10 paragraphs in a textual way to describe what you want versus just 3 examples or 4 examples which can clearly distinguish what you really want to or you are expecting
+
+522
+01:41:12,720 --> 01:41:22,860
+[rushikesh]: in 0 short let's say you want to write 10 paragraphs to do the same thing versus you just give it 3 examples and done now which 1 would you pick out of this
+
+523
+01:41:28,700 --> 01:41:29,480
+[malavika]: 3 examples
+
+524
+01:41:39,520 --> 01:41:41,980
+[rushikesh]: which 1 would you pick
+
+525
+01:41:42,440 --> 01:41:49,700
+[rushikesh]: like if you have to describe your complete problem in a lengthy way versus just giving some 3-4 examples
+
+526
+01:41:51,380 --> 01:41:52,540
+[malavika]: yeah the 3 examples
+
+527
+01:41:53,860 --> 01:41:57,380
+[rushikesh]: right so see these are all different strategies which we have
+
+528
+01:41:57,380 --> 01:42:37,980
+[rushikesh]: now we can't say that we don't say just use this only or that only so when the problem statement comes you have an option to try out with a few shots see are you able to get better response you start with 0 shot you start with 0 shot see if you are able to get a better response with directly 0 shot if not then can you try with some basic prompting on top of it and see if you are able to get a better response even if not then can you just give some examples and see whether you are able to get a good output if not then you have to again mix and match like few shot with some prompting does it work out
+
+529
+01:42:38,140 --> 01:42:43,440
+[rushikesh]: so these are all different ways that we can try out to find out what is going to work
+
+530
+01:42:43,620 --> 01:42:47,060
+[rushikesh]: so all of this we are discussing about the tools which are available
+
+531
+01:42:47,920 --> 01:42:52,320
+[rushikesh]: now we have to decide which tool to use at what situation
+
+532
+01:42:55,360 --> 01:42:56,820
+[rushikesh]: yeah malvika are you getting me
+
+533
+01:42:56,820 --> 01:42:57,560
+[rushikesh]: yes got it
+
+534
+01:42:57,560 --> 01:42:58,140
+[malavika]: yeah i
+
+535
+01:42:58,140 --> 01:42:58,760
+[malavika]: am there
+
+536
+02:47:22,200 --> 02:47:22,700
+[rushikesh]: perfect
+
+537
+01:43:02,060 --> 01:43:02,960
+[rushikesh]: any other questions
+
+538
+02:50:18,480 --> 02:50:19,520
+[rushikesh]: okay great
+
+539
+01:43:08,360 --> 01:43:10,760
+[rushikesh]: so i think let's take a break and then we will
+
+540
+01:43:10,760 --> 01:43:13,320
+[rushikesh]: i'll just make it to 9 minute
+
+541
+01:54:24,540 --> 01:54:27,320
+[rushikesh]: so i hope you guys can hear me now
+
+542
+01:54:27,800 --> 01:54:35,040
+[rushikesh]: so let's get started and continue on further to what we were doing till now
+
+543
+01:54:36,420 --> 01:54:44,200
+[rushikesh]: so let me just add 1 more example for the view shot to be more clear
+
+544
+01:54:44,200 --> 01:54:45,340
+[rushikesh]: can you just a quick check
+
+545
+01:54:46,920 --> 01:54:48,300
+[rushikesh]: and can you hear me properly
+
+546
+01:54:56,920 --> 01:54:58,540
+[rushikesh]: hear me and can you see the screen
+
+547
+01:55:15,060 --> 01:55:19,940
+[rushikesh]: that okay so let me just stop and share it once
+
+548
+01:55:30,600 --> 01:55:32,280
+[rushikesh]: awesome it's invisible now
+
+549
+01:55:48,860 --> 01:55:51,240
+[rushikesh]: so let's get ahead
+
+550
+01:55:51,500 --> 01:55:59,700
+[rushikesh]: so just 1 more example that i'll share now see lanchain comes up with some various different features
+
+551
+01:55:59,940 --> 01:56:14,740
+[rushikesh]: so as i was talking yesterday lanchain provides some additional features which are not there directly with individual libraries to build more specifically the llm integrated applications
+
+552
+01:56:14,960 --> 01:56:17,820
+[rushikesh]: so lankin is more focused on the llm integrated applications
+
+553
+01:56:18,640 --> 01:56:33,980
+[rushikesh]: so just 1 thing now for me to show you guys is how we can implement the qshort with some more refined structure here is the lanchain comes up with some prompting modules
+
+554
+01:56:34,920 --> 01:56:42,540
+[rushikesh]: okay there is a chat prompt template and there is a few short chat message prompt template
+
+555
+01:56:42,560 --> 01:56:52,860
+[rushikesh]: okay let me name but this is more focused on the future definition and this 1 is purely for building a prompt which are more templatized
+
+556
+01:56:54,240 --> 01:56:57,080
+[rushikesh]: so this allows us to build prompts which are more templatized
+
+557
+01:56:57,180 --> 01:57:03,000
+[rushikesh]: in the world of prompting usually a good part of your prompt is already there
+
+558
+01:57:03,400 --> 01:57:06,360
+[rushikesh]: you will be adding some additional pieces to the prompt
+
+559
+01:57:06,980 --> 01:57:08,860
+[rushikesh]: a good prompt will already be there
+
+560
+01:57:08,860 --> 01:57:12,080
+[rushikesh]: you will be adding some extra pieces to your prompt
+
+561
+01:57:12,520 --> 01:57:14,780
+[rushikesh]: so that can be templatized
+
+562
+01:57:16,100 --> 01:57:28,940
+[rushikesh]: so in this case the template is if you see we are talking about a human input which is going to be the user message and then we are going to define ai message
+
+563
+01:57:29,540 --> 01:57:35,640
+[rushikesh]: ok we are also going to define the ai message which says these are the categories and there is the output
+
+564
+01:57:35,840 --> 01:57:38,140
+[rushikesh]: these are 2 things which will be filled from the outside
+
+565
+01:57:38,240 --> 01:57:39,600
+[rushikesh]: we will see
+
+566
+01:57:39,960 --> 01:57:42,860
+[rushikesh]: what you see is these are the inputs which will be actually filled
+
+567
+01:57:42,980 --> 01:57:47,080
+[rushikesh]: so this is 1 prompt template with input output
+
+568
+01:57:48,640 --> 01:57:53,300
+[rushikesh]: so this human will become input the ai will become output
+
+569
+01:57:53,300 --> 01:57:58,520
+[rushikesh]: we are saying when i asked you this thing first you told me this
+
+570
+01:57:59,440 --> 01:58:01,720
+[rushikesh]: when i asked you this you told me this
+
+571
+01:58:01,720 --> 01:58:07,860
+[rushikesh]: now this is 1 more strategy to define the future i will do it and it will become more clear to you all
+
+572
+01:58:11,420 --> 01:58:20,280
+[rushikesh]: okay so 1 thing is this is to define a 1 interaction this was a human message and this is the ai message
+
+573
+01:58:20,980 --> 01:58:22,400
+[rushikesh]: so this is a human message
+
+574
+01:58:22,660 --> 01:58:24,160
+[rushikesh]: let us say this is the ai message
+
+575
+01:58:24,160 --> 01:58:34,420
+[rushikesh]: we are telling the system see llm do not remember anything as i already told you that what it did in the past anything you do not remember
+
+576
+01:58:35,140 --> 01:58:51,100
+[rushikesh]: if in the next iteration you tell that ok see these are the 10 messages that i have this is what i asked and this is what you told me we can even create some dummy or false responses with respect to ai to signify that okay this is what you told
+
+577
+01:58:51,200 --> 01:58:53,900
+[rushikesh]: that means this is what i want also in the same format
+
+578
+01:58:54,640 --> 01:58:59,740
+[rushikesh]: so we define this human ai combination from the examples
+
+579
+01:59:01,900 --> 01:59:07,580
+[rushikesh]: we transform that to a few short chat message prompt template
+
+580
+01:59:08,040 --> 01:59:10,520
+[rushikesh]: so what we're doing here is this is the example prompt
+
+581
+01:59:10,640 --> 01:59:13,360
+[rushikesh]: you see that we need to use this prompt structure
+
+582
+01:59:13,980 --> 01:59:22,040
+[rushikesh]: we need to use this prompt structure and these are our examples which we need to fill in here
+
+583
+01:59:22,040 --> 01:59:27,540
+[rushikesh]: i will show you what will be created as part of an end goal from this
+
+584
+01:59:28,300 --> 01:59:29,800
+[rushikesh]: okay i'll show you that
+
+585
+01:59:31,360 --> 01:59:36,500
+[rushikesh]: then this is like the loop part that we did earlier
+
+586
+01:59:36,500 --> 01:59:38,000
+[rushikesh]: this will do the loop part internally
+
+587
+01:59:38,400 --> 01:59:46,280
+[rushikesh]: it will loop through all the examples and it will create chat prompt template for each of the examples internally
+
+588
+01:59:46,980 --> 01:59:49,740
+[rushikesh]: this is 1 more chat prompt template from messages
+
+589
+01:59:50,060 --> 01:59:52,000
+[rushikesh]: okay this is the messages we are defining
+
+590
+01:59:52,740 --> 01:59:59,520
+[rushikesh]: so the sequence of system user ai all this blocks are called as messages
+
+591
+02:00:00,200 --> 02:00:08,660
+[rushikesh]: okay so now here the sequence is system classify customer inquiry into categories we are giving it all the list of categories
+
+592
+02:00:09,800 --> 02:00:12,320
+[rushikesh]: so these are the few short prompt
+
+593
+02:00:14,380 --> 02:00:42,180
+[rushikesh]: this is the few short prompt which is nothing but a combination of human ai human ai human ai messages okay so 1 is a system after that we say human and ai so this will be a human this will be ai this will be human this will be ai this will be human this will be ai this will be human this will be ai and then we will ask the model that okay now i will give you new human you give me your ai response
+
+594
+02:00:44,440 --> 02:01:04,140
+[rushikesh]: there is 1 more thing in line chain now line chain is called as a line chain because it allows us to chain things in a sequence ok it's a chain it's a chain means we can combine multiple components together using this pipe symbol
+
+595
+02:01:04,820 --> 02:01:10,660
+[rushikesh]: okay so this pipe symbol signifies the output of 1 module should go to the next module
+
+596
+02:01:11,140 --> 02:01:16,860
+[rushikesh]: so i can say that the final prompt which is going to contain all the list of messages
+
+597
+02:01:18,340 --> 02:01:21,080
+[rushikesh]: after this we generate first the final prompt
+
+598
+02:01:21,500 --> 02:01:27,900
+[malavika]: rishi 1 quick question in define examples where you've given examples
+
+599
+02:01:28,780 --> 02:01:45,540
+[malavika]: now you wrote the examples there and an example prompt when you say human input so this input is automatically it refers to the examples input it doesn't need any reference to examples which we declared on top
+
+600
+02:01:45,540 --> 02:01:48,160
+[rushikesh]: yeah see we are giving example reference here
+
+601
+02:01:48,740 --> 02:02:02,100
+[rushikesh]: so we are saying see this is going to generate the few short where we are saying this will be the template that we need to use and fill this template with this examples
+
+602
+02:02:03,920 --> 02:02:27,000
+[rushikesh]: okay if i just rename this i can say few short examples ok and this few short examples are being passed to this ok and this is individual short prompt and this here is the individual shot prompt
+
+603
+02:02:27,240 --> 02:02:32,060
+[rushikesh]: so we are saying this is a template for 1 single shot
+
+604
+02:02:33,060 --> 02:02:36,060
+[rushikesh]: now you fill this with the sequence of shots
+
+605
+02:02:36,660 --> 02:02:43,760
+[rushikesh]: so it will internally loop through and generate all of this shots
+
+606
+02:02:47,480 --> 02:02:47,980
+[malavika]: whitney
+
+607
+02:02:48,360 --> 02:02:49,500
+[malavika]: yes yes got it
+
+608
+02:02:49,500 --> 02:02:51,000
+[rushikesh]: yeah perfect
+
+609
+02:02:52,340 --> 02:03:00,400
+[rushikesh]: so then this will give us all the sequence of prompts and this will be the final where all of this will be stacked together
+
+610
+02:03:00,400 --> 02:03:08,740
+[rushikesh]: so will be system there will be all this sequence of prompts and then finally a human and this thing this is a chain
+
+611
+02:03:08,740 --> 02:03:11,980
+[rushikesh]: now chain is basically a sequence of steps which will be done
+
+612
+02:03:12,180 --> 02:03:16,260
+[rushikesh]: lang chain allows us to create a sequence of steps here
+
+613
+02:03:16,300 --> 02:03:19,580
+[rushikesh]: i can say llm1 pipe llm2
+
+614
+02:03:19,780 --> 02:03:22,320
+[rushikesh]: so response of llm1 will then go to the llm2
+
+615
+02:03:22,420 --> 02:03:23,760
+[rushikesh]: i can say pipe llm3
+
+616
+02:03:24,420 --> 02:03:32,280
+[rushikesh]: not just that there are lot of different other further components we will see over the future those are also we can pipe it here
+
+617
+02:03:32,280 --> 02:03:34,860
+[rushikesh]: this is called as alcel
+
+618
+02:03:36,420 --> 02:03:38,540
+[rushikesh]: ok lanchain expression language
+
+619
+02:03:39,120 --> 02:03:44,480
+[rushikesh]: so lanchain comes up with this piping based language and they call it lcel
+
+620
+02:03:45,420 --> 02:03:51,340
+[rushikesh]: ok so we are saying we should create the final prompt and then send the final prompt to llm
+
+621
+02:03:51,460 --> 02:03:53,540
+[rushikesh]: now let us see like how we can execute this
+
+622
+02:03:55,440 --> 02:04:05,720
+[rushikesh]: to execute this these are the messages which we will try and then let us run it
+
+623
+02:04:06,200 --> 02:04:15,620
+[rushikesh]: so we will now iterate through the test prompts 1 by 1 input we call the chain dot input invoke ok
+
+624
+02:04:15,720 --> 02:04:22,920
+[rushikesh]: so this is the chain ok let us just have a look at this this is a chain in langchain chain.invoke
+
+625
+02:04:25,640 --> 02:05:03,280
+[rushikesh]: so this is the invoke similar to the llm.invoke we did langchain comes up with invoke for all this all of its methods okay all its method over the future you will see rag and all the ai again everywhere it comes up with a dot invoke as a common method for all its processes the chain dot invoke brackets we are saying this input that you need here this is a filler as this is a template this template requires a data to come from the outside this input part so this input part we are saying is this
+
+626
+02:05:04,120 --> 02:05:11,400
+[rushikesh]: okay so first step in this chain what will happen is this input it will try to fill in to the final prompt
+
+627
+02:05:11,840 --> 02:05:16,940
+[rushikesh]: in the final prompt this input will go here this will be replaced with the actual input that we are passing
+
+628
+02:05:17,440 --> 02:05:27,980
+[rushikesh]: that will generate the final prompt with the few short examples and then it will run the llm based on this final prompt
+
+629
+02:05:28,480 --> 02:05:32,200
+[rushikesh]: let me run it and i'll show you the overall structure
+
+630
+02:05:34,620 --> 02:05:36,640
+[rushikesh]: okay so these are my examples
+
+631
+02:05:36,680 --> 02:05:40,080
+[rushikesh]: i want to change my email address it's account support
+
+632
+02:05:40,360 --> 02:05:41,200
+[rushikesh]: where is my package
+
+633
+02:05:41,200 --> 02:05:43,820
+[rushikesh]: it's been 10 days it's talking about shipping inquiry
+
+634
+02:05:44,180 --> 02:05:45,840
+[rushikesh]: do you offer enterprise pricing
+
+635
+02:05:45,860 --> 02:05:47,140
+[rushikesh]: it's a sales inquiry
+
+636
+02:05:47,160 --> 02:05:50,400
+[rushikesh]: so all of this are just based on the few shot
+
+637
+02:05:50,580 --> 02:05:54,480
+[rushikesh]: okay we are not giving any detailed description for any department
+
+638
+02:05:54,900 --> 02:06:00,640
+[rushikesh]: we are not providing any description for the department we are simply giving it as an example
+
+639
+02:06:01,780 --> 02:06:07,460
+[rushikesh]: and llm is able to understand which question should go to what account
+
+640
+02:06:08,240 --> 02:06:11,020
+[rushikesh]: now let me show you this final prompt
+
+641
+02:06:11,680 --> 02:06:36,000
+[rushikesh]: okay let me see if we can do dot invoke input input okay so see every component of line chain provides this invoke so same thing i am just using the final prompt to dot in book and passing the input directly to this
+
+642
+02:06:36,280 --> 02:06:42,280
+[rushikesh]: what you will see is i can take this in a notepad for a better structural showcase
+
+643
+02:06:46,020 --> 02:06:48,620
+[rushikesh]: okay so this is the whole message
+
+644
+02:06:48,620 --> 02:07:49,900
+[rushikesh]: okay so first message is let me zoom out so first message you see the system message which is there in the system message classify customer inquiry categories account and all fine this is 1 message ok let me keep a space so that we can distinguish this is 1 message then as part of the few short prompting it is creating a human message which is how do i reset my password then we have a ai message just a category colon account support so we are saying this is how you respond or this is how you responded earlier we're just creating a this filling part here we talked about a llm filling so we are just faking here ok to some level we are faking you can assume that we are saying see this is what i asked you you told me this ok just like we are giving the context to the llm
+
+645
+02:07:49,960 --> 02:07:51,180
+[rushikesh]: so this is 1 example
+
+646
+02:07:52,960 --> 02:07:57,494
+[rushikesh]: this is second example
+
+647
+02:07:57,494 --> 02:07:57,780
+[rushikesh]: this is third example
+
+648
+02:07:57,780 --> 02:08:10,360
+[rushikesh]: okay so that few short module broke all of this created all of this into this kind of a human ai human ai messages and then finally we have this is also 1 more example
+
+649
+02:08:12,840 --> 02:08:17,380
+[rushikesh]: so there are 4 examples and this is our fifth question
+
+650
+02:08:17,860 --> 02:08:27,180
+[rushikesh]: okay now this is the combination of human ai system human ai human ai human ai human ai and finally human
+
+651
+02:08:27,500 --> 02:08:37,000
+[rushikesh]: now when we pass this sequence of messages to the llm llm will be able to provide a 1 more ai message as a response
+
+652
+02:08:39,340 --> 02:08:41,620
+[rushikesh]: so that's what is happening here
+
+653
+02:08:41,820 --> 02:09:00,360
+[rushikesh]: when we do the chain.invoke this chain.invoke will first do final prompt.invoke with the input it will create a prompt the output of this will be sent to the llm.invoke then llm.invoke will call that output and run it
+
+654
+02:09:01,580 --> 02:09:10,860
+[rushikesh]: okay so this is just a way to use internal llm sorry the line chain functions to do the same thing with me
+
+655
+02:09:13,480 --> 02:09:20,940
+[rushikesh]: so all of you can just take some 2-3 minutes and run through this once okay let's run through this once
+
+656
+02:09:45,920 --> 02:09:49,840
+[rushikesh]: run through the examples of few shot and the 0 shot if
+
+657
+02:12:57,160 --> 02:13:01,660
+[rushikesh]: so i think now let's move on to the next component which we have
+
+658
+02:13:01,660 --> 02:13:05,580
+[rushikesh]: next component which we have if you're still running that's fine but
+
+659
+02:13:13,840 --> 02:13:17,100
+[rushikesh]: is not defined so you have to import
+
+660
+02:13:17,860 --> 02:13:19,240
+[rushikesh]: the dict from the top
+
+661
+02:13:21,000 --> 02:13:22,840
+[rushikesh]: ok so just take the so
+
+662
+02:13:24,240 --> 02:13:44,160
+[rushikesh]: shedding the error that you have is a dict which you need to import from so at the very top you will see the typing list data
+
+663
+02:13:48,400 --> 02:13:51,720
+[rushikesh]: so i think now let us move on to the next part
+
+664
+02:13:54,560 --> 02:13:58,300
+[rushikesh]: now we did with this few short and 0 short
+
+665
+02:13:59,000 --> 02:14:12,340
+[rushikesh]: 0 short is more for a direct question answering where you expect llm to already know the knowledge and few short is where you want to talk more in terms of giving examples
+
+666
+02:14:13,280 --> 02:14:33,020
+[rushikesh]: rather than talking a lot about the problem statement you just give an example saying see this is what i want and how i want it so sometimes you need a good structure you want a json based outputs you keep the example that shows how to create a final json based output
+
+667
+02:14:33,660 --> 02:14:36,300
+[rushikesh]: ok so those are things works as a few shot
+
+668
+02:14:37,660 --> 02:14:49,040
+[rushikesh]: now if you want to define how to get the right set of checklist for selecting the few shot example because picking the few shot example is also very important
+
+669
+02:14:49,200 --> 02:14:55,380
+[rushikesh]: if you are not picking it in the right way then also your system will not be able to handle all the situations
+
+670
+02:14:55,680 --> 02:15:02,860
+[rushikesh]: to pick up the right set of examples what we really need to do is there is a simple strategy to deal with that
+
+671
+02:15:02,860 --> 02:15:10,520
+[rushikesh]: so the strategy basically says diverse representative and quality okay drq
+
+672
+02:15:10,960 --> 02:15:21,920
+[rushikesh]: so where we are saying you should cover a diverse range of examples okay we should be able to cover different aspects of the task space
+
+673
+02:15:22,700 --> 02:15:28,220
+[rushikesh]: it should be able to like cover the whole spectrum of different categories
+
+674
+02:15:29,060 --> 02:15:40,320
+[rushikesh]: if you're doing sentiment you should have examples from the positive negative neutral and also you can represent to some level the diversity which will be there in the original data
+
+675
+02:15:40,320 --> 02:15:48,140
+[rushikesh]: if let's say positives are going to 50% negatives are going to be 30% neutral are going to be 20% you represent it in that manner
+
+676
+02:15:48,580 --> 02:15:52,060
+[rushikesh]: your task examples also in that manner
+
+677
+02:15:52,380 --> 02:16:03,800
+[rushikesh]: it should be representative match the distribution as i just mentioned their inputs you will encounter if 80% are complete example should reflect it in a same way
+
+678
+02:16:05,080 --> 02:16:13,440
+[rushikesh]: then finally the quality each example must be of a perfect demonstration in terms of how you want your outputs to be
+
+679
+02:16:13,860 --> 02:16:26,620
+[rushikesh]: okay if your examples are not right then the output is also going to be impacted like the quality if it is garbage the output also that you will get in terms of final result is going to be garbage
+
+680
+02:16:26,640 --> 02:16:32,420
+[rushikesh]: the model learn from every aspect including the mistakes that you do with the quality
+
+681
+02:16:33,120 --> 02:16:34,780
+[rushikesh]: ok so before deploying
+
+682
+02:16:35,500 --> 02:16:38,500
+[rushikesh]: are my example drivers you can just cross check
+
+683
+02:16:38,500 --> 02:16:43,940
+[rushikesh]: are they representative of the original distribution and is my quality good
+
+684
+02:16:43,940 --> 02:16:48,380
+[rushikesh]: if the answer is no then try to just keep defining this examples
+
+685
+02:16:49,540 --> 02:16:50,400
+[rushikesh]: ok because
+
+686
+02:16:51,280 --> 02:17:00,840
+[rushikesh]: when you try to describe it in a more textual way then also you can just describe it in a more detailed way but examples also should represent all representations
+
+687
+02:17:03,460 --> 02:17:03,960
+[rushikesh]: now
+
+688
+02:17:04,700 --> 02:17:09,660
+[rushikesh]: this 1 more thing which is very important to understand is the order and consistency based aspects
+
+689
+02:17:12,180 --> 02:17:28,460
+[rushikesh]: now as we know and understand the llms the first middle and last if you're setting these examples llm will be focusing more on the recent examples example closer to the end have a more stronger influence on the output
+
+690
+02:17:28,860 --> 02:17:36,240
+[rushikesh]: if you are providing 10 examples out of those 10 the ones at the 8 9 10 are more impactful
+
+691
+02:17:37,060 --> 02:17:43,980
+[rushikesh]: because that's where the generation is going to start from and those words are going to more closer to the generation
+
+692
+02:17:44,640 --> 02:18:05,440
+[rushikesh]: that's why their impact on the final output is going to be more as compared to the initial 1 because they are bit farther and their attention scores may not reach at that level of depth to the final output but the closer ones will have a more impact in terms of attention scores so that this will have a more output
+
+693
+02:18:05,600 --> 02:18:14,560
+[rushikesh]: so all the important examples that you want to highlight keep them towards the end of the whole few short strategy
+
+694
+02:18:15,180 --> 02:18:25,760
+[rushikesh]: okay put edge cases earlier which are like rare cases you can put it earlier and then which are more impactful ones which are more repetitive ones is to keep it around the end
+
+695
+02:18:25,760 --> 02:18:28,220
+[rushikesh]: the final example is weighted most heavily
+
+696
+02:18:28,820 --> 02:18:33,220
+[rushikesh]: so keep this in mind when you are defining the few-shot strategy
+
+697
+02:18:34,340 --> 02:18:37,920
+[rushikesh]: the format consistency also has a big impact
+
+698
+02:18:38,400 --> 02:18:45,740
+[rushikesh]: so when we talk about format consistency what really happens is all examples must follow a very identical structure
+
+699
+02:18:46,760 --> 02:18:59,720
+[rushikesh]: okay so if you are saying if you are providing the examples where text great sentiment positive text bad sentiment negative this format should be very consistent then you will get the same consistency in the output
+
+700
+02:18:59,820 --> 02:19:02,940
+[rushikesh]: if you pass the text it is a sentiment colon sentiment
+
+701
+02:19:03,420 --> 02:19:08,940
+[rushikesh]: but if you break that format it will also break in the output
+
+702
+02:19:08,960 --> 02:19:12,180
+[rushikesh]: output will also become inconsistent for you
+
+703
+02:19:12,440 --> 02:19:16,200
+[rushikesh]: so great is positive text bad negative
+
+704
+02:19:16,380 --> 02:19:24,660
+[rushikesh]: so all of the same the output will also not match and it will also be random with respect to what is going to come here
+
+705
+02:19:24,680 --> 02:19:31,980
+[rushikesh]: so you have to be very careful with respect to how you are defining the output they should be the shoe short example they should be consistent
+
+706
+02:19:33,060 --> 02:19:37,920
+[rushikesh]: so if few short fails your whole system actually goes into the failing
+
+707
+02:19:38,360 --> 02:19:45,520
+[rushikesh]: it could be 1 of the main reasons for the failing would be inconsistency format that you would often have
+
+708
+02:19:46,300 --> 02:19:53,260
+[rushikesh]: so with few shorts take care of these things as a best practices and it will work out very well
+
+709
+02:19:55,960 --> 02:19:59,200
+[rushikesh]: okay so just examples we did this already
+
+710
+02:19:59,280 --> 02:20:01,020
+[rushikesh]: so i'll just continue on this
+
+711
+02:20:01,400 --> 02:20:04,180
+[rushikesh]: so few shot overall prompt will look like this
+
+712
+02:20:04,540 --> 02:20:11,260
+[rushikesh]: so you have till now we were doing an automated part but if you think of few shots few shots will overall look like
+
+713
+02:20:17,380 --> 02:20:25,820
+[rushikesh]: this is this example 1 there is a feedback there is a category there is a feedback there is a category there is a feedback there is a category and finally now classified this
+
+714
+02:20:26,040 --> 02:20:32,640
+[rushikesh]: this is a feedback this is a category and based on this the model will generate a final output point
+
+715
+02:20:32,640 --> 02:20:34,760
+[rushikesh]: so this is the pre-filling which we will do
+
+716
+02:20:34,760 --> 02:20:41,080
+[rushikesh]: so pre-filling will tell the model that you have to provide the output as category colon output only
+
+717
+02:20:44,640 --> 02:20:58,880
+[rushikesh]: okay now if we talk about how to define a good comprehensive prompt these all things become very important
+
+718
+02:20:59,240 --> 02:21:03,580
+[rushikesh]: okay just remember this thing like what all you need this will become your starting point
+
+719
+02:21:03,640 --> 02:21:13,780
+[rushikesh]: when you are starting on any llm based project definitions you can consider all of those as your key things when you start
+
+720
+02:21:14,280 --> 02:21:16,580
+[rushikesh]: the very first thing is your role definition
+
+721
+02:21:17,280 --> 02:21:24,080
+[rushikesh]: so you have to see what role i will need which will have a good impact on the overall system
+
+722
+02:21:24,720 --> 02:21:31,020
+[rushikesh]: you can make your roles more refined more niche to get more specific output
+
+723
+02:21:31,160 --> 02:21:35,200
+[rushikesh]: the niche world i would like to highlight plays a very important role
+
+724
+02:21:35,460 --> 02:21:46,100
+[rushikesh]: if you say you are an ai engineer who is very specialized in prompt engineering versus fine tuning of the model can have a different impact
+
+725
+02:21:46,100 --> 02:21:48,140
+[rushikesh]: so you have to very niche in the role
+
+726
+02:21:48,680 --> 02:21:50,400
+[rushikesh]: second setting the context
+
+727
+02:21:52,040 --> 02:21:59,120
+[rushikesh]: so context in itself is a complete field that has started around context engineering
+
+728
+02:21:59,760 --> 02:22:02,940
+[rushikesh]: so what all goes into context is very important
+
+729
+02:22:03,520 --> 02:22:06,600
+[rushikesh]: okay because context defines the whole knowledge
+
+730
+02:22:07,120 --> 02:22:11,620
+[rushikesh]: context is anything which the model already don't know about
+
+731
+02:22:12,100 --> 02:22:19,320
+[rushikesh]: this is the extra knowledge that you are passing to your system to be more better
+
+732
+02:22:20,340 --> 02:22:24,560
+[rushikesh]: task description like what is your task what is your end goal
+
+733
+02:22:24,720 --> 02:22:27,240
+[rushikesh]: you try to define it in a more descriptive way
+
+734
+02:22:27,440 --> 02:22:38,100
+[rushikesh]: input specifications how the input should be what are the things that we include output requirements the constraints and the guidelines which will be required for the system
+
+735
+02:22:38,900 --> 02:22:44,620
+[rushikesh]: providing examples wherever possible and the actual user input
+
+736
+02:22:46,020 --> 02:22:48,840
+[rushikesh]: ok now question out of all this
+
+737
+02:22:49,360 --> 02:22:50,160
+[rushikesh]: what do you think
+
+738
+02:22:50,160 --> 02:22:57,180
+[rushikesh]: what will go in the system prompt and what will go in the input user user prompt
+
+739
+02:23:00,280 --> 02:23:10,320
+[rushikesh]: out of all or 8 of this which 1 will be system and which 1 will be human
+
+740
+02:23:18,420 --> 02:23:29,320
+[rushikesh]: please read through it and tell me context will be system and inputs will be human
+
+741
+02:23:29,440 --> 02:23:30,300
+[rushikesh]: okay good
+
+742
+02:23:31,740 --> 02:23:32,460
+[rushikesh]: good malvika
+
+743
+02:23:43,460 --> 02:23:44,560
+[rushikesh]: what should be system
+
+744
+02:23:45,660 --> 02:23:47,320
+[rushikesh]: what should be input
+
+745
+02:23:47,440 --> 02:23:56,800
+[rushikesh]: there are some more some more changes that we can do malvik has given some output answer others can add to it
+
+746
+02:24:10,080 --> 02:24:54,240
+[rushikesh]: in this see the role definition context task description all of this will go into the system prompt ok even like only the actual input will go as a user prompt ok only the actual input will go as a user prompt all other 7 will be your system prompt because see when you are building a chatbot now you can imagine it from the chatbot perspective what will the user give from this ok what you want user to have control over and what you don't want user to have control
+
+747
+02:25:08,440 --> 02:25:20,780
+[malavika]: think the control should be more towards the system prompts and not towards the input it should be as flexible as possible
+
+748
+02:25:21,940 --> 02:25:49,420
+[rushikesh]: right see the more the constraints examples now do you want role to be given by user what do you think should user define now let's say it's a banking chatbot now in the banking chatbot which will give the bank related descriptions now can the user define what kind of role the chatbot should play do you want user to provide that
+
+749
+02:25:50,020 --> 02:26:12,540
+[rushikesh]: can a user say that to the ok so
+
+750
+02:26:14,140 --> 02:26:23,580
+[rushikesh]: roll see now when it is a banking chatbot you don't want user to say that suddenly you are a marketing expert now give me marketing advice
+
+751
+02:26:23,680 --> 02:26:24,960
+[rushikesh]: so you don't want that
+
+752
+02:26:24,960 --> 02:26:31,180
+[rushikesh]: so this will be in the system in the back end where user can't control it and this to have a more impact
+
+753
+02:26:31,640 --> 02:26:44,940
+[rushikesh]: context is now this banking chatbot what kind of context it can have what kind of product details and all those things it'll again be limited to your system not to the user
+
+754
+02:26:45,660 --> 02:26:58,700
+[rushikesh]: task description to some level can come from the user like what he want to achieve but how to achieve that task what to do in that task how to solve that task all of that will come from the system prompt
+
+755
+02:26:58,700 --> 02:27:03,620
+[rushikesh]: so task description can be some level broken in the actual input versus the task description
+
+756
+02:27:04,900 --> 02:27:09,740
+[rushikesh]: input specification like how the user should pass the input should be in the system prompt
+
+757
+02:27:10,680 --> 02:27:13,000
+[rushikesh]: user can define the input specifications
+
+758
+02:27:13,820 --> 02:27:18,580
+[rushikesh]: you have to define the system prompt separately like how the input should be
+
+759
+02:27:18,940 --> 02:27:21,720
+[rushikesh]: output requirements to define the system prompt
+
+760
+02:27:22,060 --> 02:27:24,900
+[rushikesh]: constraint guidelines all will be system prompt
+
+761
+02:27:25,640 --> 02:27:28,600
+[rushikesh]: examples all will be system prompt
+
+762
+02:27:28,860 --> 02:27:45,840
+[rushikesh]: to some level user can provide example saying okay i want output in this form but when we are building custom chatbots see chatbot in terms of chatgpt versus when we build chatbots for application those go in a slightly different way
+
+763
+02:27:46,100 --> 02:28:03,380
+[rushikesh]: chatgpt is a very generic chatbot that can answer anything that can take anything that can resolve anything it's a very generic but when we build a chatbot or i am just giving you a chatbot as example but we will see lot of other things but imagine from the chatbot for your company
+
+764
+02:28:04,040 --> 02:28:18,200
+[rushikesh]: okay in that company chatbot you want it to be restricted in terms of what it can do what type of answers it can do what's the length of answers it can do all of those things will go in the system pump
+
+765
+02:28:18,200 --> 02:28:20,220
+[rushikesh]: you do not want user to define that
+
+766
+02:28:20,900 --> 02:28:31,160
+[rushikesh]: okay so these things plus your system user bifurcation is what you start your project describing with
+
+767
+02:28:31,860 --> 02:28:40,060
+[rushikesh]: okay i hope you are getting a perspective in terms of what will be the system what will be the user
+
+768
+02:28:48,080 --> 02:28:49,720
+[rushikesh]: now this is a structured output
+
+769
+02:28:49,820 --> 02:28:52,700
+[rushikesh]: we will discuss the structure output in the code part
+
+770
+02:28:52,700 --> 02:28:54,160
+[rushikesh]: we will run the code now
+
+771
+02:28:54,160 --> 02:29:04,940
+[rushikesh]: but structured output is about trying to get up like let's say you are doing the data extraction from certain context
+
+772
+02:29:05,280 --> 02:29:09,880
+[rushikesh]: okay for example 1 of the example that i'll take is let's say there is annual reports
+
+773
+02:29:10,160 --> 02:29:22,280
+[rushikesh]: in annual reports you want to extract just the revenue number okay revenue net income these are some of the things that you want to extract from the annual report
+
+774
+02:29:22,660 --> 02:29:25,620
+[rushikesh]: and you only want those numbers with some key values
+
+775
+02:29:25,760 --> 02:29:36,360
+[rushikesh]: okay you will say key revenue colon revenue number net income colon net income value you want very specific not like a textual output
+
+776
+02:29:37,160 --> 02:29:41,640
+[rushikesh]: that structured getting that structure we call it a structured output
+
+777
+02:29:42,100 --> 02:29:44,660
+[rushikesh]: ok it's like more of a json based output
+
+778
+02:29:45,040 --> 02:29:49,260
+[rushikesh]: we will see how to create that json based output structure
+
+779
+02:29:49,700 --> 02:29:54,260
+[rushikesh]: so let's now go back to the code and so this is like
+
+780
+02:29:56,240 --> 02:30:02,420
+[rushikesh]: just 1 more thing before we go to the code we'll just finish the ppt and we will go on the code
+
+781
+02:30:03,220 --> 02:30:07,280
+[rushikesh]: there are 2 different ways to look at doing the prompting
+
+782
+02:30:08,000 --> 02:30:11,820
+[rushikesh]: 1 is all from the role and 1 is all from the constraint
+
+783
+02:30:12,620 --> 02:30:24,740
+[rushikesh]: okay 1 is when we say role you are giving it a specific role and you are asking it to follow that specific role with all the constraints to some level
+
+784
+02:30:25,680 --> 02:30:32,140
+[rushikesh]: so this is purely role where you say okay you go do not go beyond this you have to just follow this structure
+
+785
+02:30:32,640 --> 02:30:38,260
+[rushikesh]: constraint is all about defining what you can do what you can't do you are limited to this much
+
+786
+02:30:38,360 --> 02:30:39,520
+[rushikesh]: so those are constraint
+
+787
+02:30:40,440 --> 02:30:46,900
+[rushikesh]: together with role and constraint we can just achieve some very powerful systems
+
+788
+02:30:47,780 --> 02:30:55,700
+[rushikesh]: ok so those 2 things roles plus the constraints and boundaries are like a very important thing in the whole prompting structure
+
+789
+02:30:59,060 --> 02:31:05,400
+[rushikesh]: and these are some of the things which we will be again discussing over the future session which is chain of thought
+
+790
+02:31:06,680 --> 02:31:08,700
+[rushikesh]: these are some prompting strategies
+
+791
+02:31:09,280 --> 02:31:21,880
+[rushikesh]: if you think of it chain of thought is 1 which we will discuss later but here the goal is to ask the llm to don't solve the problem in 1 go but to break it into smaller pieces and then solve it
+
+792
+02:31:21,900 --> 02:31:29,680
+[rushikesh]: we always say that okay you first think through it step by step and then provide the result rather than directly giving the result
+
+793
+02:31:29,680 --> 02:31:30,740
+[rushikesh]: it has some impacts
+
+794
+02:31:30,880 --> 02:31:33,460
+[rushikesh]: so it's called as a let's think step by step
+
+795
+02:31:33,840 --> 02:31:39,560
+[rushikesh]: persona switching you can have multiple personas in the prompt
+
+796
+02:31:39,960 --> 02:31:47,060
+[rushikesh]: 1 persona could be a critic and 1 as a supporter or 1 could be a creator and 1 could be a verifier
+
+797
+02:31:47,560 --> 02:31:54,900
+[rushikesh]: so that kind of persona switching you can have so that you can generate the same thing with the multiple perspectives
+
+798
+02:31:56,760 --> 02:32:08,480
+[rushikesh]: iterative refinement is like self-enhancement you generate the output you again pass it to the same prompt and say that ok now you enhance this it will again enhance to some level and then again you enhance it
+
+799
+02:32:08,480 --> 02:32:36,900
+[rushikesh]: 1 of the strategy which i heard few months back 1 person was doing is what they do is they ask the system to generate some output and they will tell again that ok this is only 5 out of 10 i want this to go 10 out of 10 so then system will say that ok if you think this is 5 out of 5 then let me try to take it to the next level so that is a self announcement when you say ok this is still incomplete you go more beyond this
+
+800
+02:32:37,640 --> 02:32:46,600
+[rushikesh]: decomposition is asking it to break it into tasks subcomponents and then to fulfill those subcomponents
+
+801
+02:32:48,060 --> 02:32:55,820
+[rushikesh]: self-critique this is the 1 that i was talking about 1 will generate 1 will evaluate and 1 will provide a improved version
+
+802
+02:32:55,840 --> 02:33:03,980
+[rushikesh]: okay generate and evaluate the result of evaluate you again pass it to generate and generate will see that and say okay this is missing let me help add it
+
+803
+02:33:04,780 --> 02:33:07,980
+[rushikesh]: output priming ends with the start of the desired format
+
+804
+02:33:08,040 --> 02:33:14,020
+[rushikesh]: so this is priming is something we have seen when we define that okay this is how you should start
+
+805
+02:33:14,540 --> 02:33:18,280
+[rushikesh]: so these are like different strategies
+
+806
+02:33:18,400 --> 02:33:28,820
+[rushikesh]: i think all of this you may have been doing till now unconsciously but these are some strategies which will help us building the system in a lot more better way
+
+807
+02:33:29,760 --> 02:33:33,280
+[rushikesh]: ok so we'll come to this key things
+
+808
+02:33:33,580 --> 02:33:35,240
+[rushikesh]: let me go back to the code
+
+809
+02:33:39,800 --> 02:33:42,480
+[rushikesh]: okay so now we did the 0 shot
+
+810
+02:33:43,580 --> 02:33:44,720
+[rushikesh]: let me go ahead
+
+811
+02:33:51,980 --> 02:34:01,500
+[rushikesh]: and let us look at 1 of a complete example with respect to the 7 components which we saw earlier
+
+812
+02:34:04,640 --> 02:34:09,380
+[rushikesh]: ok with respect to the 7 components i'm trying to create a class
+
+813
+02:34:09,380 --> 02:34:11,780
+[rushikesh]: ok perfect template prompt
+
+814
+02:34:12,040 --> 02:34:15,940
+[rushikesh]: so all this different 57 pieces which we saw
+
+815
+02:34:17,460 --> 02:34:26,500
+[rushikesh]: so if you see we have a in this class we are taking role context task input format output format constraints and example
+
+816
+02:34:26,520 --> 02:34:32,580
+[rushikesh]: this is a list of strings constraints and this is also list of strings list of dictionaries of examples
+
+817
+02:34:33,520 --> 02:34:40,880
+[rushikesh]: these are the initial values with the build we can take all of these values and construct a prompt
+
+818
+02:34:41,600 --> 02:34:59,280
+[rushikesh]: okay so in the prompt we are saying role you are this role context this is a context task this is a task input format output format if there are constraints combine the constraints into the string list of constraint into a list string
+
+819
+02:35:00,280 --> 02:35:05,820
+[rushikesh]: these are examples break those examples into input output input output combinations
+
+820
+02:35:07,840 --> 02:35:17,000
+[rushikesh]: and then perfect prompt template class if you see we are trying to give all of these as a inputs
+
+821
+02:35:17,520 --> 02:35:24,640
+[rushikesh]: so first is a rule a software senior software engineer with 10 plus years of experience in the code review
+
+822
+02:35:25,440 --> 02:35:34,580
+[rushikesh]: context you are conducting code review for a fintech startup that prioritizes security maintainability and the performance
+
+823
+02:35:34,660 --> 02:35:39,020
+[rushikesh]: if you see we are being very specific and trying to say this is authentic startup
+
+824
+02:35:39,780 --> 02:35:43,760
+[rushikesh]: task review the provided code snippet and identify the issues
+
+825
+02:35:44,240 --> 02:35:46,580
+[rushikesh]: suggest improvement and highlight the good practices
+
+826
+02:35:47,340 --> 02:35:50,780
+[rushikesh]: a code segment in python javascript or another language
+
+827
+02:35:50,900 --> 02:35:51,780
+[rushikesh]: it's a input
+
+828
+02:35:52,640 --> 02:35:57,420
+[rushikesh]: output provide your review in this structure
+
+829
+02:35:58,660 --> 02:36:01,620
+[rushikesh]: okay now we are saying we should provide a summary
+
+830
+02:36:02,360 --> 02:36:05,940
+[rushikesh]: just provide a 1 to 2 sentence of overview in the summary
+
+831
+02:36:06,700 --> 02:36:09,120
+[rushikesh]: we list out all the issues found
+
+832
+02:36:09,120 --> 02:36:12,160
+[rushikesh]: if you see we are giving it a very specific structure
+
+833
+02:36:12,720 --> 02:36:15,520
+[rushikesh]: issue 1 description suggested fix
+
+834
+02:36:17,060 --> 02:36:26,020
+[rushikesh]: what are the good practices and what are your recommendations actionable improvements and then lastly the constraints list of constraints
+
+835
+02:36:27,880 --> 02:36:32,740
+[rushikesh]: so this we are defining like a template for our system prompt
+
+836
+02:36:33,380 --> 02:36:40,280
+[rushikesh]: okay once we have this prompt thing available only thing is missing is the input
+
+837
+02:36:40,280 --> 02:36:45,780
+[rushikesh]: this is all becoming the system now but we can use this to define the final output
+
+838
+02:36:45,900 --> 02:36:46,900
+[rushikesh]: this is just an example
+
+839
+02:36:47,280 --> 02:36:52,320
+[rushikesh]: okay we can just run it and we will be able to get a proper refined output
+
+840
+02:36:52,440 --> 02:36:55,580
+[rushikesh]: okay let me run this and show you
+
+841
+02:36:59,240 --> 02:37:01,100
+[rushikesh]: so this is a code to review
+
+842
+02:37:03,280 --> 02:37:19,820
+[rushikesh]: define get user data authenticate and then we are saying this is a system prompt ok the class which we have built above when we say dot build it will return the whole prompt as a system prompt
+
+843
+02:37:20,660 --> 02:37:33,360
+[rushikesh]: the whole 7 components we are passing as a system prompt and here human message we are passing this content review this code this is a python code and this is a code follower
+
+844
+02:37:34,080 --> 02:38:43,820
+[rushikesh]: now let's run this and see module not found let me see what module always look at the last line it says langchain not found so i can just say import import langchain import so import langchain it says 1 more langchain we already have it where is this giving error this 1 is here ok we have not installed the langchain actually that's why it is giving that error i will go to the top and let me just add here pip install line chain isenq for silence add here pip install livechain-q for silence installation done now if you run this let us see how the output looks like
+
+845
+02:38:47,500 --> 02:38:51,000
+[rushikesh]: if you see the output is coming exactly as we gave it
+
+846
+02:38:52,100 --> 02:39:02,180
+[rushikesh]: hash summary the code word basic user data retrieval and authentication logic but it contains critical security vulnerability and some design issues
+
+847
+02:39:02,940 --> 02:39:31,360
+[rushikesh]: so that issues found now the way we gave it an exact thing it is coming up with 1 this is issue number 1 description suggested fix it comes up with the fix issue 2 authentication logic issue 3 if you see the output format that we gave it it is following that format exactly and with a consistent structure good practices and finally the list of recommendations
+
+848
+02:39:32,020 --> 02:39:34,820
+[rushikesh]: but this kind of thing it also came up with the extra thing
+
+849
+02:39:36,040 --> 02:39:44,180
+[rushikesh]: this is something we didn't ask but it has come up with the extra thing of final new updated code
+
+850
+02:39:44,440 --> 02:39:57,800
+[rushikesh]: but at least this other part becomes easy to pass because it is not following the exact structure we can easily pass it in the strings all the issues and everything ok so that is a core goal
+
+851
+02:39:57,800 --> 02:40:04,440
+[rushikesh]: now let us see how to even have a better output structuring
+
+852
+02:40:05,500 --> 02:40:13,340
+[rushikesh]: ok now this was a whole 7 component that we saw how we can define all this 7 pieces
+
+853
+02:40:13,540 --> 02:40:22,460
+[rushikesh]: this is still a small prompt i would say the actual prompts can go sometimes lengthy with more details and information wherever required
+
+854
+02:40:24,180 --> 02:40:31,600
+[rushikesh]: now let me show you a information parsing with a structured output
+
+855
+02:40:32,800 --> 02:40:37,120
+[rushikesh]: if you see this is the invoice data okay
+
+856
+02:40:37,340 --> 02:41:02,860
+[rushikesh]: we are talking about the invoice data where there are different information company name company address to whom it is being sent the company the receiver company address of the company items quantity prices subtotal tax total all of these are different information invoices can come in a variety of formats
+
+857
+02:41:03,480 --> 02:41:07,040
+[rushikesh]: okay every company may provide an invoice in a slightly different format
+
+858
+02:41:07,440 --> 02:41:22,500
+[rushikesh]: and invoice parsing is 1 of a very large use case in many companies where how do we process the invoices in an automated way because they keep getting invoices from different vendors
+
+859
+02:41:23,360 --> 02:41:26,980
+[rushikesh]: now to parse this in a structured way what do you mean by structure
+
+860
+02:41:27,100 --> 02:41:28,400
+[rushikesh]: let me show you the prompt
+
+861
+02:41:33,020 --> 02:41:35,040
+[rushikesh]: okay now have a look at this
+
+862
+02:41:35,600 --> 02:41:38,620
+[rushikesh]: extract the structure data from this invoice
+
+863
+02:41:39,620 --> 02:41:42,200
+[rushikesh]: return only valid json
+
+864
+02:41:43,580 --> 02:41:49,400
+[rushikesh]: ok we are saying extract the structure data from this invoice written only valid json
+
+865
+02:41:50,140 --> 02:41:52,460
+[rushikesh]: so the required json structure
+
+866
+02:41:53,140 --> 02:41:56,340
+[rushikesh]: so we are providing the json structure here
+
+867
+02:41:56,720 --> 02:42:11,340
+[rushikesh]: invoice number date vendor name and address of the vendor customer name and address of the customer the list of items with the description quantity unit price total if we see here
+
+868
+02:42:12,540 --> 02:42:14,740
+[rushikesh]: so unit price each is present
+
+869
+02:42:15,200 --> 02:42:21,660
+[rushikesh]: okay but total is not present if you see quantity multiplied by total is not present
+
+870
+02:42:21,660 --> 02:42:32,380
+[rushikesh]: this is a each item price but we are asking it description quantity unit price and total finally subtotal tax total due date
+
+871
+02:42:32,460 --> 02:42:36,440
+[rushikesh]: all of this pieces and we are merging the invoice data
+
+872
+02:42:37,300 --> 02:42:39,860
+[rushikesh]: ok so this is the invoice which can keep changing
+
+873
+02:42:40,240 --> 02:42:41,460
+[rushikesh]: we may have a different invoice
+
+874
+02:42:41,460 --> 02:42:43,060
+[rushikesh]: usually this comes as a pdf
+
+875
+02:42:43,260 --> 02:42:50,660
+[rushikesh]: you can use some pdf parsing libraries and then get this as a raw text and then we pass it to llm like this
+
+876
+02:42:50,660 --> 02:42:54,400
+[rushikesh]: let's run this prompt and see what kind of output we get
+
+877
+02:42:59,600 --> 02:43:04,820
+[rushikesh]: okay so what we are doing is llm.invoke extraction prompt
+
+878
+02:43:05,740 --> 02:43:09,740
+[rushikesh]: we are keeping temperature equal to 0 because we need consistent output
+
+879
+02:43:10,900 --> 02:43:26,420
+[rushikesh]: and then there is an additional thing called as a response mine type okay multimedia input type which we have seen is a application json it should be the output response it should be in the json format
+
+880
+02:43:27,980 --> 02:43:47,860
+[rushikesh]: the output we try to pass it to the json.loads it's a python library which parses the json into a dictionary ok python dictionary so what i will do is i will first print this response response.content it and then we will go and print the json
+
+881
+02:43:50,020 --> 02:43:54,680
+[rushikesh]: print json parsing
+
+882
+02:44:03,940 --> 02:44:17,620
+[rushikesh]: so something wrong let us just have a look completion.clear got an unexpected keyword i think this okay there was something wrong here let me run it again
+
+883
+02:44:21,300 --> 02:44:25,900
+[rushikesh]: okay so this is not supported with the openai model
+
+884
+02:44:25,900 --> 02:44:27,760
+[rushikesh]: right now we are using openai model
+
+885
+02:44:27,940 --> 02:44:55,820
+[rushikesh]: this is supported more with the gemini model this part of a parameter but let me remove this and run it should still work out ok if you see this is the invoice data extraction ok this is a direct response which we have received from the llm
+
+886
+02:44:56,760 --> 02:45:06,540
+[rushikesh]: if you see it has actually passed the invoice number date vendor address customer items with even the total price
+
+887
+02:45:06,620 --> 02:45:09,400
+[rushikesh]: okay the total price is not present in the overall data
+
+888
+02:45:09,680 --> 02:45:14,880
+[rushikesh]: this is doing the multiplication by itself and bringing this number
+
+889
+02:45:15,900 --> 02:45:35,540
+[rushikesh]: okay so it is bringing this multiplication total number description subtotal tax total due date and as we pass it through the python dictionary method we also have the dictionary parsing of this complete json as it is
+
+890
+02:45:35,540 --> 02:45:59,540
+[rushikesh]: the benefit now is we can directly customer customer name and we get a name
+
+891
+02:45:59,540 --> 02:46:03,540
+[rushikesh]: if you say customer address we get a address
+
+892
+02:46:04,280 --> 02:46:10,360
+[rushikesh]: so directly parsable content is now available through the llm
+
+893
+02:46:10,380 --> 02:46:14,680
+[rushikesh]: so this we call it as a structured output parsing
+
+894
+02:46:15,300 --> 02:46:18,400
+[rushikesh]: now lang chain gives us some more better approaches to do this
+
+895
+02:46:18,400 --> 02:46:22,860
+[rushikesh]: we have a pydentic object which i will again show you over the future
+
+896
+02:46:23,040 --> 02:46:30,320
+[rushikesh]: so we can even do pydentic based objects which gives a more structured way to define this json
+
+897
+02:46:31,100 --> 02:47:06,553
+[rushikesh]: but same thing we this llms are fine tuned to provide the json response in a better way okay this llms are fine tuned specifically to provide the json outputs in a more structured way so this always works out similar to this like i do run some extraction things from annual reports which are like some 200 to 300 to 250 values we extract from the annual we extract from the annual
+
+898
+02:47:06,700 --> 02:47:09,789
+[rushikesh]: reports in a similar fashion
+
+899
+02:47:09,937 --> 02:47:12,378
+[rushikesh]: any questions on this
+
+900
+02:47:22,820 --> 02:47:27,300
+[rushikesh]: i think i hope you guys are clear so we'll stop at this point
+
+901
+02:47:27,980 --> 02:47:37,360
+[rushikesh]: so overall the things which we have covered today like 3 message types which are very core with respect to the llm system user assistant
+
+902
+02:47:37,360 --> 02:47:39,160
+[rushikesh]: all of these are going to be very useful
+
+903
+02:47:39,520 --> 02:47:44,640
+[rushikesh]: then we looked at the 7 different components which we can define within the prompt
+
+904
+02:47:44,680 --> 02:47:50,460
+[rushikesh]: the role context task input output constraints examples
+
+905
+02:47:51,780 --> 02:47:59,160
+[rushikesh]: then we looked at 0 short prompting which is all about leveraging the llm's existing knowledge
+
+906
+02:48:00,040 --> 02:48:12,880
+[rushikesh]: then we looked at the few short prompting which is to provide external information as how the llm should solve the problem by giving more examples to it
+
+907
+02:48:13,380 --> 02:48:21,040
+[rushikesh]: then a prompt template we just saw that how we can set up what all pieces not every piece is required for everything
+
+908
+02:48:21,500 --> 02:48:30,460
+[rushikesh]: ok every piece is not required but more of individual pieces which variable whichever required we can use that and some design patterns
+
+909
+02:48:30,480 --> 02:48:33,060
+[rushikesh]: we will be talking more about this in the next session
+
+910
+02:48:34,120 --> 02:48:36,760
+[rushikesh]: the chain of thought tree of thought
+
+911
+02:48:37,080 --> 02:48:46,740
+[rushikesh]: so those are the 2 key prompting strategies which we will discuss and then we will move on to the rag based strategies in the next session
+
+912
+02:48:48,720 --> 02:48:49,220
+[rushikesh]: ok
+
+913
+02:48:52,460 --> 02:48:53,660
+[rushikesh]: are you guys with me
+
+914
+02:48:54,660 --> 02:48:56,240
+[rushikesh]: yes no on today's content
+
+915
+02:49:03,460 --> 02:49:03,960
+[rushikesh]: others
+
+916
+02:49:07,360 --> 02:49:07,840
+[rushikesh]: awesome
+
+917
+02:49:07,840 --> 02:49:10,520
+[rushikesh]: are you guys able to grasp how is the pace
+
+918
+02:49:10,520 --> 02:49:12,420
+[rushikesh]: again i want to confirm with you all
+
+919
+02:49:13,080 --> 02:49:34,120
+[rushikesh]: are you all able to follow any challenges anything you want to highlight i will be happy to accommodate that if there are any challenges or anything you want me to tweak please let me
+
+920
+02:49:46,100 --> 02:49:49,560
+[rushikesh]: so with that we will stop for today
+
+921
+02:49:51,140 --> 02:50:02,440
+[rushikesh]: i hope you all have started with the quiz and assignment so please continue on that this week you will have more again for the current week quiz and assignment separately
+
+922
+02:50:06,720 --> 02:50:14,940
+[rushikesh]: so please do not keep piling up keep clearing the earlier quizzes and assignments on a regular basis
+
+923
+02:50:19,540 --> 02:50:21,780
+[rushikesh]: so then are we good to close
+
+924
+02:50:29,440 --> 02:50:32,200
+[malavika]: just let me know with the thumbs up awesome guys
+
+925
+02:50:32,320 --> 02:50:34,780
+[malavika]: rishi this notebook we will get it today
+
+926
+02:50:35,380 --> 02:50:38,400
+[rushikesh]: yeah i will share it now
+
+927
+02:50:38,420 --> 02:50:40,140
+[rushikesh]: so the notebook is already there
+
+928
+02:50:41,540 --> 02:50:47,820
+[rushikesh]: but even the formatted 1 more formatted 1 i will share with some more examples and 1 more
+
+929
+02:50:47,960 --> 02:50:59,940
+[rushikesh]: there's 1 more example that you will find in the notebook that i'll share which will have a more it will be using everything again and creating a 1 single class out of it okay
+
+930
+02:51:00,040 --> 02:51:01,500
+[rushikesh]: so you guys can go through that
+
+931
+02:51:02,860 --> 02:51:10,740
+[rushikesh]: within that book azure part i will just add separately which is not there right now but i will be adding that
+
+932
+02:51:13,500 --> 02:51:17,520
+[rushikesh]: okay great everyone see you again next week take care
+
+933
+02:51:17,520 --> 02:51:28,700
+[rushikesh]: if any queries make use of the group share things share your learnings share your questions please make the best use of the group
+
+934
+02:51:29,060 --> 02:51:35,720
+[rushikesh]: and i'll request also you to make it interactive over the guru
+
+935
+02:51:35,740 --> 02:51:39,640
+[rushikesh]: if you have any queries you want to share anything keep doing that
+
+936
+02:51:41,920 --> 02:51:43,160
+[rushikesh]: okay perfect guys
+
+937
+02:51:43,440 --> 02:51:44,440
+[rushikesh]: have a great time
+
+938
+02:51:44,440 --> 02:51:45,180
+[rushikesh]: great day
+
+939
+02:51:45,180 --> 02:51:46,360
+[rushikesh]: have a great week
+
+940
+02:51:46,500 --> 02:51:47,840
+[rushikesh]: see you again next week
+
+941
+02:51:47,900 --> 02:51:48,400
+[rushikesh]: bye
+

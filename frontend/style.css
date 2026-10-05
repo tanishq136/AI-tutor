@@ -1,0 +1,417 @@
+:root {
+    --bg-color: #0f172a;
+    --panel-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --danger-color: #ef4444;
+    --danger-hover: #dc2626;
+    --success-color: #22c55e;
+    --border-color: #334155;
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--panel-bg);
+    width: 100%;
+    max-width: 600px;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-secondary);
+}
+
+.status-panel {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red { background-color: var(--danger-color); }
+.dot.green { background-color: var(--success-color); }
+
+.device-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.device-selection label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+select {
+    padding: 0.75rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+select:focus {
+    border-color: var(--primary-color);
+}
+
+.ack-message {
+    font-size: 0.85rem;
+    color: var(--success-color);
+    background: rgba(34, 197, 94, 0.1);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn.recording {
+    background-color: var(--danger-color);
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.btn.recording:hover {
+    background-color: var(--danger-hover);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.transcription-panel {
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.transcription-panel h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.result-box {
+    min-height: 100px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.placeholder {
+    color: var(--border-color);
+    font-style: italic;
+}
+
+#loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    padding: 2rem 0;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.rag-verification-panel {
+    background-color: var(--panel-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rag-verification-panel h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+}
+
+.terminal-window {
+    background-color: #050505;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 8px;
+    height: 180px;
+    overflow-y: auto;
+    font-size: 0.85rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    border: 1px solid #222;
+}
+
+.terminal-line {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.terminal-line.error { color: #ff6b6b; }
+.terminal-line.success { color: #4ade80; font-weight: bold; }
+.terminal-line.processing { color: #60a5fa; }
+
+.chat-section {
+    background-color: var(--panel-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: var(--text-primary);
+}
+
+#chat-answer {
+    margin-top: 15px;
+    background-color: #1a1a1a;
+    border-left: 4px solid var(--primary-color);
+}
+
+#answer-audio {
+    width: 100%;
+    margin-top: 15px;
+    height: 40px;
+}
+
+/* ── Upload section ── */
+.upload-section {
+    background-color: var(--panel-bg);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+}
+
+.upload-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.upload-section p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.upload-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.upload-controls input[type="file"] {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    flex: 1;
+    min-width: 0;
+}
+
+#upload-status {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ── Secondary button ── */
+.btn.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.625rem 1.25rem;
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn.secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── Ask section ── */
+.chat-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.section-hint {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.ask-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Idle state — normal blue */
+.ask-mic-idle {
+    align-self: flex-start;
+}
+
+/* Recording state — red pulse, same as old .btn.recording */
+.ask-mic-recording {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+    animation: pulse 1.5s infinite;
+}
+
+.ask-mic-recording:hover {
+    background-color: var(--danger-hover) !important;
+}
+
+/* Live question preview bubble */
+.question-preview {
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.5;
+    min-height: 2.5rem;
+    word-break: break-word;
+}
+
+/* Answer box */
+#chat-answer {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #1a1a1a;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+#answer-audio {
+    width: 100%;
+    margin-top: 0.75rem;
+    height: 40px;
+}
+
+/* RAG terminal spacing */
+.rag-verification-panel {
+    margin-top: 1.25rem;
+}
